@@ -4,7 +4,7 @@ const Navber = () => {
   return (
     <div className="bg-white py-3 shadow-2xl">
      
-      <div>
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
         <Link to={"/"} className="text-3xl font-semibold">
                {/* logo */}
         <span className="text-red-500">R</span>inty
