@@ -21,9 +21,9 @@ const Navber = () => {
       <nav>
         <ul className="flex gap-7 items-center font-semibold">
           <NavLink to={"/"}><li>Home</li></NavLink>
-          <NavLink><li>Products</li></NavLink>
-          <NavLink><li>About</li></NavLink>
-          <NavLink><li>Contact</li></NavLink>
+          <NavLink to={"/products"}><li>Products</li></NavLink>
+          <NavLink to={"/about"}><li>About</li></NavLink>
+          <NavLink to={"/contact"}><li>Contact</li></NavLink>
          
         
          

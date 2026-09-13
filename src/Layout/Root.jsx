@@ -1,13 +1,14 @@
-import { Outlet } from "react-router";
-import TopHeader from "../Components/SheardComponents/TopHeader";
+
+
+import { Outlet } from "react-router-dom";
 import Navber from "../Components/SheardComponents/Navber";
 
 const Root = () => {
     return (
         <div>
             <Navber></Navber>
-            <TopHeader></TopHeader>
-            <Outlet></Outlet>
+           <Outlet></Outlet>
+           
         </div>
     );
 };
