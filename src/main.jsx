@@ -2,14 +2,14 @@
 import './index.css'
 
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from './Layout/Root';
 import Home from './Pages/Home/Home';
 
 import Products from './Pages/Products/Products';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import Cart from './Pages/Cart/Cart';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       { path: "/products", element: <Products></Products> },
       { path: "/about", element: <About></About> },
       { path: "/contact", element: <Contact></Contact> },
+       { path: "/cart", element: <Cart></Cart> },
     ],
   },
 ]);
