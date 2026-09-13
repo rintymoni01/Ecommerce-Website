@@ -24,22 +24,31 @@ const Navber = () => {
             <NavLink
               to={"/"}
               className={({isActive}) =>
-                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"}`
+                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"} cursor-pointer`
               }
             >
               <li>Home</li>
             </NavLink>
-            <NavLink to={"/products"}>
+            <NavLink to={"/products"}  className={({isActive}) =>
+                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"} cursor-pointer`
+              }>
               <li>Products</li>
             </NavLink>
-            <NavLink to={"/about"}>
+            <NavLink to={"/about"}  className={({isActive}) =>
+                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"} cursor-pointer`
+              }>
               <li>About</li>
             </NavLink>
-            <NavLink to={"/contact"}>
+            <NavLink to={"/contact"}  className={({isActive}) =>
+                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"} cursor-pointer`
+              }>
               <li>Contact</li>
             </NavLink>
           </ul>
+         
         </nav>
+      <Link to={"/cart"}>
+      </Link>
       </div>
     </div>
   );
