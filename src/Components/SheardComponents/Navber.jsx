@@ -20,10 +20,10 @@ const Navber = () => {
       </div>
       <nav>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Home</li>
+          <li>Products</li>
+          <li>About</li>
+          <li>Contact</li>
         </ul>
       </nav>
       </div>
