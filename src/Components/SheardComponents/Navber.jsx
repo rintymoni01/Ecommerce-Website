@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { LuMapPin } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 const Navber = () => {
   const location = false;
   return (
@@ -19,7 +20,7 @@ const Navber = () => {
             <FaCaretDown />
           </div>
         </div>
-        <nav>
+        <nav className="flex gap-7 items-center">
           <ul className="flex gap-7 items-center font-semibold">
             <NavLink
               to={"/"}
@@ -45,10 +46,12 @@ const Navber = () => {
               <li>Contact</li>
             </NavLink>
           </ul>
-         
-        </nav>
-      <Link to={"/cart"}>
+          <Link to={"/cart"} className="relative">
+      <IoCartOutline className="h-7 w-7" />
+      <span className="bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white">0</span>
       </Link>
+        </nav>
+     
       </div>
     </div>
   );
