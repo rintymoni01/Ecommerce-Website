@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { LuMapPin } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
 const Navber = () => {
@@ -20,10 +20,13 @@ const Navber = () => {
       </div>
       <nav>
         <ul className="flex gap-7 items-center font-semibold">
-          <li>Home</li>
-          <li>Products</li>
-          <li>About</li>
-          <li>Contact</li>
+          <NavLink to={"/"}><li>Home</li></NavLink>
+          <NavLink><li>Products</li></NavLink>
+          <NavLink><li>About</li></NavLink>
+          <NavLink><li>Contact</li></NavLink>
+         
+        
+         
         </ul>
       </nav>
       </div>
