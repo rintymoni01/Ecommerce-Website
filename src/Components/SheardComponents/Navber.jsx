@@ -24,7 +24,7 @@ const Navber = () => {
             <NavLink
               to={"/"}
               className={({isActive}) =>
-                `${isActive ? "border-b-3 transition-all border-red-500"}`
+                `${isActive ? "border-b-3 transition-all border-red-500": "text-black"}`
               }
             >
               <li>Home</li>
