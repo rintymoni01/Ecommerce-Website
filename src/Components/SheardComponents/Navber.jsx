@@ -107,7 +107,7 @@ const Navber = () => {
           {/* Login / User */}
           <SignedOut>
             <SignInButton mode="modal">
-              <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-md font-semibold">
+              <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md font-semibold">
                 Sign In
               </button>
             </SignInButton>
