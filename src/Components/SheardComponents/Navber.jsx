@@ -32,7 +32,7 @@ const toggleDropdown =()=>{
             <span className="font-semibold">
               {location ? <div className="-space-y-2">
                 <p>{location.country}</p>
-                <p>location.state</p>
+                <p>{location.state}</p>
               </div> : "Add Address"}
             </span>
 
