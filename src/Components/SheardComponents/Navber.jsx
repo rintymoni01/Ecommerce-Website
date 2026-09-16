@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { LuMapPin } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
+import { IoCartOutline, IoCloseSharp } from "react-icons/io5";
 
 import {
   SignedIn,
@@ -40,13 +40,13 @@ const toggleDropdown =()=>{
           </div>
           {
             openDropdown ? <div className="w-[250px] h-max shadow-2xl z-50 bg-white fixed top-16 left-60 border-2 p-5 border-gray-100 rounded-md">
-
+               <h1 className="font-semibold mb-4 text-xl flex justify-between">Change Location <span onClick={getLocation}><IoCloseSharp /></span></h1>
             </div>
           }
 
         </div>
 
-        {/* Navbar */}
+        // {/* Navbar */}
         <nav className="flex gap-7 items-center">
 
           <ul className="flex gap-7 items-center font-semibold">
