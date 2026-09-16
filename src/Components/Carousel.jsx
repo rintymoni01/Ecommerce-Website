@@ -1,11 +1,18 @@
-
+import { useContext, useEffect } from "react";
+import { DataContex } from "../Contex/DataContex";
 
 const Carousel = () => {
-    return (
-        <div>
-            fdff
-        </div>
-    );
+  const { fatchAllProducts } = useContext(DataContex);
+
+  useEffect(() => {
+    fatchAllProducts();
+  }, []);
+
+  return (
+    <div>
+      Carousel
+    </div>
+  );
 };
 
 export default Carousel;

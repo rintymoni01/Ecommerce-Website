@@ -14,6 +14,7 @@ import Products from "./Pages/Products/Products";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Pages/Cart/Cart";
+import { DataProvider } from "./Contex/DataContex";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -57,6 +58,8 @@ ReactDOM.createRoot(root).render(
     publishableKey={PUBLISHABLE_KEY}
     afterSignOutUrl="/"
   >
+    <DataProvider>
     <RouterProvider router={router} />
+    </DataProvider>
   </ClerkProvider>
 );

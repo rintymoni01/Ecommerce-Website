@@ -24,13 +24,13 @@ const Root = () => {
           setLocation(exactLocation);
           setOpenDropdown(false);
 
-          console.log(exactLocation);
+          // console.log(exactLocation);
         } catch (error) {
-          // console.log(error);
+          console.log(error);
         }
       },
       (error) => {
-        // console.log("Location error:", error);
+        console.log("Location error:", error);
       }
     );
   };
