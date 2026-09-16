@@ -18,11 +18,15 @@ const Carousel = () => {
   console.log("Products:", data);
 
   const settings = {
-    dots: true,
+    dots: false,
+    autoplay: true,
+    autoplayspeed: 2000,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow:
+    prevArrow:
   };
 
   return (
@@ -44,6 +48,9 @@ const Carousel = () => {
                   </h1>
                   <h4 className="md:w-[500px] line-clamp-3 text-gray-400 pr-7">{item.description}</h4>
                   <button className="bg-gradient-to-r from-red-500 to-purple-500 text-white px-3 py-2 rounded-md  cursor-pointer mt-2">Shop Now</button>
+                </div>
+                <div>
+                    <img src={item.image} alt={item.title}  className="rounded-full w-[550px] hover:scale-105 transition-all shadow-2xl shadow-red-400"/>
                 </div>
               </div>
             </div>
