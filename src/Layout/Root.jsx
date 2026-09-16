@@ -6,7 +6,16 @@ import { useState } from "react";
 
 const Root = () => {
     const [location,getLocation]=useState()
-    const [openDropdown,setOpenDropdown]=useState()
+    const [openDropdown,setOpenDropdown]=useState(false)
+    const getLocation =async ()=>{
+        navigator.geolocation.getCurrentPosition(async pos=>{
+            const{latiyude,longitude}=pos.coords 
+            console.log(TbWorldLatitude,longitude);
+            const url="https.//nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json"
+            
+        })
+    }
+
     return (
         <div>
             <Navber location={location} getLocation={getLocation} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} ></Navber>

@@ -48,7 +48,7 @@ const toggleDropdown =()=>{
 
         </div>
 
-        // {/* Navbar */}
+    {/* Navber */}
         <nav className="flex gap-7 items-center">
 
           <ul className="flex gap-7 items-center font-semibold">
