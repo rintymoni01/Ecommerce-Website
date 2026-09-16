@@ -31,7 +31,10 @@ const Carousel = () => {
         {
             data?slice(0,7)?.map((item, index)=>{
                 return <div key={index} className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[24243e] -z-10">
-<div className=" flex gap-10 justify-center h-[600px] items-center">
+<div className=" flex gap-10 justify-center h-[600px] items-center px-4">
+    <div className="">
+
+    </div>
 
 </div>
                 </div>
