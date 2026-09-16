@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import SliderImport from "react-slick";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const Slider = SliderImport.default ?? SliderImport;
 
@@ -14,8 +15,21 @@ const Carousel = () => {
   useEffect(() => {
     fatchAllProducts();
   }, []);
-  const SempleprevArrow =(props)=>{
- const {className, style, onClick}
+  const SamplePrevArrow =(props)=>{
+ const {className, style, onClick} = props;
+ return (
+ <div onClick={onClick} className={`arrow ${className}`} style={{zindex:3}}>
+<AiOutlineArrowLeft className="arrows" style={{...style, display:"block", borderRadius:"50px", background:"#f53347" , color:"white", position:"absolute" , padding:"2px" , left:"50px"}} onMouseOver="this.style.backgroundColor ='#555' "/>
+ </div>
+ )
+  }
+   const SampleNextArrow =(props)=>{
+ const {className, style, onClick} = props;
+ return (
+ <div onClick={onClick} className={`arrow ${className}`}>
+<AiOutlineArrowRight className="arrows" style={{...style, display:"block", borderRadius:"50px", background:"#f53347" , color:"white", position:"absolute" , padding:"2px" , left:"50px"}} />
+ </div>
+ )
   }
 
   console.log("Products:", data);
