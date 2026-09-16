@@ -41,7 +41,9 @@ const toggleDropdown =()=>{
           {
             openDropdown ? <div className="w-[250px] h-max shadow-2xl z-50 bg-white fixed top-16 left-60 border-2 p-5 border-gray-100 rounded-md">
                <h1 className="font-semibold mb-4 text-xl flex justify-between">Change Location <span onClick={getLocation}><IoCloseSharp /></span></h1>
-            </div>
+               <button onClick={getLocation} className="bg-red-500 text-white px-3 py-1 cursor-pointer hover:bg-red-400 ">Detect My Location</button>
+            </div> :null
+
           }
 
         </div>
