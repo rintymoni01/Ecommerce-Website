@@ -34,7 +34,7 @@ const Carousel = () => {
 <div className=" flex gap-10 justify-center h-[600px] items-center px-4">
     <div className="space-y-6">
         <h3 className="text-red-500 font-semibold font-sans text-sm">Powering your world with tha best in Electronics</h3>
-
+<h1>{item.title}</h1>
     </div>
 
 </div>
