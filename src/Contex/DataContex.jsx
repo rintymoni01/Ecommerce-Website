@@ -12,10 +12,12 @@ export const DataProvider = ({ children }) => {
       const res = await axios.get(
         "https://dummyjson.com/products?limit=150"
       );
-      console.log(res);
-      const productsData = res.data.products 
-      setData (productsData)
 
+      console.log(res);
+
+      const productsData = res.data.products;
+
+      setData(productsData);
     } catch (error) {
       console.log(error);
     }
