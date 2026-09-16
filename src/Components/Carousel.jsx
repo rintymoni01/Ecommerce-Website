@@ -14,6 +14,9 @@ const Carousel = () => {
   useEffect(() => {
     fatchAllProducts();
   }, []);
+  const SempleprevArrow =(props)=>{
+ const {className, style, onClick}
+  }
 
   console.log("Products:", data);
 
@@ -25,8 +28,8 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow:
-    prevArrow:
+    nextArrow: <SampleNextArrow to="next"/> ,
+    prevArrow:<SamplePrevArrow to="prev"/>,
   };
 
   return (
