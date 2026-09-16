@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
     }
   }
   return (
-    <DataContex.Provider value={{ data, setData }}>
+    <DataContex.Provider value={{ data, setData ,fatchAllProducts}}>
       {children}
     </DataContex.Provider>
   );
