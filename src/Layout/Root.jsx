@@ -12,7 +12,7 @@ const Root = () => {
       async (pos) => {
         const { latitude, longitude } = pos.coords;
 
-        console.log(latitude, longitude);
+        // console.log(latitude, longitude);
 
         const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
 
@@ -26,11 +26,11 @@ const Root = () => {
 
           console.log(exactLocation);
         } catch (error) {
-          console.log(error);
+          // console.log(error);
         }
       },
       (error) => {
-        console.log("Location error:", error);
+        // console.log("Location error:", error);
       }
     );
   };
