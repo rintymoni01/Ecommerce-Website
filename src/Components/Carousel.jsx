@@ -29,10 +29,11 @@ const Carousel = () => {
     <div>
       <Slider {...settings}>
         {
-            data?slice(0,7)?.map((item, index)=>{
-                return <div key={index} className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[24243e] -z-10">
+            data?.slice(0,7)?.map((item, index)=>{
+                return <div key={index} className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] -z-10">
 <div className=" flex gap-10 justify-center h-[600px] items-center px-4">
-    <div className="">
+    <div className="space-y-6">
+        <h3 className="text-red-500 font-semibold font-sans text-sm">Powering your world with tha best in Electronics</h3>
 
     </div>
 
