@@ -38,7 +38,11 @@ const toggleDropdown =()=>{
 
             <FaCaretDown onClick={toggleDropdown}/>
           </div>
-          
+          {
+            openDropdown ? <div className="w-[250px] h-max shadow-2xl z-50 bg-white fixed top-16 left-60 border-2 p-5 border-gray-100 rounded-md">
+
+            </div>
+          }
 
         </div>
 
