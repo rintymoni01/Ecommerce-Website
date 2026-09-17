@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import SliderImport from "react-slick";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import Category from "./Category";
 
 const Slider = SliderImport.default ?? SliderImport;
 
@@ -76,6 +77,7 @@ const Carousel = () => {
         })}
        
       </Slider>
+      <Category></Category>
     </div>
   );
 };
