@@ -1,29 +1,31 @@
-
-import { getData } from '../../../Contex/DataContex';
+import { getData } from "../../../Contex/DataContex";
+import FilterSection from "./FilterSection";
 
 const ProductsComponents = () => {
-    const {data}= getData()
-    return (
-        <div>
-              <div>
-           <div className="max-w-6xl mx-auto px-4 mb-10">
-            {
-                data?.length > 0 ? (
-                    <div className="flex gap-8">
-                        <FilterSection />
+  const { data } = getData ();
 
-                    </div>
-                ) : (
-                    <div>
-                        No items found
-                    </div>
-                )
-            }
+  return (
+    <div>
+      <div className="max-w-6xl mx-auto px-4 mb-10">
+        {data?.length > 0 ? (
+          <div className="flex gap-8">
+            <FilterSection />
 
-           </div>
-        </div>
-        </div>
-    );
+            <div>
+              {/* Products */}
+            </div>
+          </div>
+        ) : (
+          <div className="flex items-center justify-center h-[400px]">
+            <img
+              src="/Image/sample.gif"
+              alt="Loading..."
+              className="w-20 h-20"
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
-
 export default ProductsComponents;
