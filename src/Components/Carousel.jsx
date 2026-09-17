@@ -18,7 +18,7 @@ const Carousel = () => {
   const SamplePrevArrow =(props)=>{
  const {className, style, onClick} = props;
  return (
- <div onClick={onClick} className={`arrow ${className}`} style={{zindex:3}}>
+ <div onClick={onClick} className={`arrow ${className}`} style={{zIndex:3}}>
 <AiOutlineArrowLeft className="arrows" style={{...style, display:"block", borderRadius:"50px", background:"#f53347" , color:"white", position:"absolute" , padding:"2px" , left:"50px"}} onMouseOver="this.style.backgroundColor ='#555' "/>
  </div>
  )
@@ -27,7 +27,7 @@ const Carousel = () => {
  const {className, style, onClick} = props;
  return (
  <div onClick={onClick} className={`arrow ${className}`}>
-<AiOutlineArrowRight className="arrows" style={{...style, display:"block", borderRadius:"50px", background:"#f53347" , color:"white", position:"absolute" , padding:"2px" , left:"50px"}} />
+<AiOutlineArrowRight className="arrows" style={{...style, display:"block", borderRadius:"50px", background:"#f53347" , color:"white", position:"absolute" , padding:"2px" , right:"50px"}} />
  </div>
  )
   }

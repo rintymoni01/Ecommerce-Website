@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.arrows{
+    height: 40px;
+    width: 40px;
+    margin: 1px;
+}
