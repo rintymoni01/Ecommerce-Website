@@ -3,7 +3,7 @@
 const FilterSection = () => {
     return (
         <div>
-            vdff
+            filter 
         </div>
     );
 };
