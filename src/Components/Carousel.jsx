@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
-import { DataContex } from "../Contex/DataContex";
+import { useEffect } from "react";
+import { getData } from "../Contex/DataContex";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,7 +10,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const Slider = SliderImport.default ?? SliderImport;
 
 const Carousel = () => {
-  const { data, fatchAllProducts } = useContext(DataContex);
+  const { data, fatchAllProducts } = getData ()
 
   useEffect(() => {
     fatchAllProducts();
@@ -42,6 +42,7 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    pouseOnHover: false,
     nextArrow: <SampleNextArrow to="next"/> ,
     prevArrow:<SamplePrevArrow to="prev"/>,
   };
@@ -67,7 +68,7 @@ const Carousel = () => {
                   <button className="bg-gradient-to-r from-red-500 to-purple-500 text-white px-3 py-2 rounded-md  cursor-pointer mt-2">Shop Now</button>
                 </div>
                 <div>
-                    <img src={item.image} alt={item.title}  className="rounded-full w-[550px] hover:scale-105 transition-all shadow-2xl shadow-red-400"/>
+                    <img src={item.images} alt={item.title}  className="rounded-full w-[550px] hover:scale-105 transition-all shadow-2xl shadow-red-400"/>
                 </div>
               </div>
             </div>
