@@ -1,0 +1,24 @@
+
+
+const MidBanner = () => {
+    return (
+        <div className="bg-gray-100 md:py-24">
+            <div className="relative max-w-7xl mx-auto md:rounded-2xl pt-24 bg-cover h-[550px] md:h-[600px]" style={{backgroundImage: "url('Image/midBanner.jpg')", backgroundPosition:"center" , backgroundAttachment:"fixed"}}>
+<div className="absolute bg-opacity-50 bg-black/60 md:rounded-2xl flex items-center justify-center">
+<div className="text-white text-center px-4">
+    <h1 className="text-3xl md:text-5xl  lg:text-6xl  font-bold mb-4">Your Beauty Essentials, Right at Your Fingertips.</h1>
+    <p className="text-lg md:text-xl mb-6">Discover the latest beauty trends at unbeatable prices, with free shipping on every order.</p>
+    <button className="bg-500 hover:bg-red-600">
+        Shop Now
+    </button>
+
+</div>
+
+</div>
+            </div>
+            
+        </div>
+    );
+};
+
+export default MidBanner;
