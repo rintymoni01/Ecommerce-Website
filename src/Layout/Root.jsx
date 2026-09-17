@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navber from "../Components/SheardComponents/Navber";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Footer from "../Components/SheardComponents/Footer";
 
 const Root = () => {
   const [location, setLocation] = useState(null);
@@ -42,13 +43,10 @@ const Root = () => {
   return (
     <div>
       <Navber
-        location={location}
-        getLocation={getLocation}
-        openDropdown={openDropdown}
-        setOpenDropdown={setOpenDropdown}
-      />
+        location={location} getLocation={getLocation} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
 
       <Outlet />
+      <Footer/>
     </div>
   );
 };
