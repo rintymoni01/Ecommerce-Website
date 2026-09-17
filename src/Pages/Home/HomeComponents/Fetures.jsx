@@ -8,7 +8,10 @@ const fetures =[
 ]
 const Fetures = () => {
     return (
-        <div>
+        <div className="bg-gray-100  py-8 px-4 sm:px-6  lg:px-8">
+            <div className="">
+
+            </div>
             
         </div>
     );
