@@ -1,25 +1,16 @@
-import { getData } from "../../Contex/DataContex";
+import FilterSection from "./ProductsComponents/FilterSection";
+import ProductsComponents from "./ProductsComponents/ProductsComponents";
+
 
 
 const Products = () => {
-    const {data}= getData()
+    
     return (
         <div>
-           <div className="max-w-6xl mx-auto px-4 mb-10">
-            {
-                data?.length > 0 ? (
-                    <div>
-
-                    </div>
-                ) : (
-                    <div>
-                        No items found
-                    </div>
-                )
-            }
-
-           </div>
+            <ProductsComponents />
+            <FilterSection/>
         </div>
+      
     );
 };
 
