@@ -1,8 +1,9 @@
 import { getData } from "../../../Contex/DataContex";
 import FilterSection from "./FilterSection";
+import ProductCard from "./ProductCard";
 
 const ProductsComponents = () => {
-  const { data } = getData ();
+  const { data, fatchAllProducts } = getData ();
 
   return (
     <div>
@@ -12,7 +13,11 @@ const ProductsComponents = () => {
             <FilterSection />
 
             <div>
-              {/* Products */}
+              {
+                data?.map((products, index)=>{
+                    return <ProductCard key={index}/>
+                })
+              }
             </div>
           </div>
         ) : (
