@@ -1,4 +1,5 @@
 import Carousel from "../../Components/Carousel";
+import Fetures from "./HomeComponents/Fetures";
 import MidBanner from "./HomeComponents/MidBanner";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
      <Carousel></Carousel>
      <MidBanner></MidBanner>
+     <Fetures></Fetures>
         </div>
     );
 };
