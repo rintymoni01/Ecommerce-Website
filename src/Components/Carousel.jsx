@@ -59,7 +59,7 @@ const Carousel = () => {
               <div className=" flex gap-10 justify-center h-[600px] items-center px-4">
                 <div className="space-y-6">
                   <h3 className="text-red-500 font-semibold font-sans text-sm">
-                    Powering your world with tha best in Electronics
+                    Enhancing your beauty with the best in Cosmetics
                   </h3>
                   <h1 className="text-4xl font-bold text-white uppercase md:w-[500px]">
                     {item.title}
@@ -68,15 +68,13 @@ const Carousel = () => {
                   <button className="bg-gradient-to-r from-red-500 to-purple-500 text-white px-3 py-2 rounded-md  cursor-pointer mt-2">Shop Now</button>
                 </div>
                 <div>
-                    <img src={item.images} alt={item.title}  className="rounded-full w-[550px] hover:scale-105 transition-all shadow-2xl shadow-red-400"/>
+                    <img src={item.images} alt={item.title}  className="rounded-full bg-pink-100 w-[550px] hover:scale-105 transition-all shadow-2xl shadow-red-400"/>
                 </div>
               </div>
             </div>
           );
         })}
-        <div>
-          <h1>1</h1>
-        </div>
+       
       </Slider>
     </div>
   );
