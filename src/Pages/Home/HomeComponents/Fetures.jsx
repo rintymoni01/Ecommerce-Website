@@ -1,3 +1,5 @@
+import { Clock, Lock, RotateCcw, Truck } from "lucide-react";
+
 const fetures = [
   { icon: Truck, text: "Free Shipping ", subText: "On orders over $100" },
   { icon: Lock, text: "Secure Payment", subText: "100% Protected payments" },
@@ -12,7 +14,11 @@ const Fetures = () => {
           {fetures.map((fetures, index) => {
             return (
               <div className="text-center items-center flex justify-center  sm:text-left">
-                <fetures.icon className="flex-shrink-0 h-10 w-10 text-gray-600" />
+                <fetures.icon className="flex-shrink-0 h-10 w-10 text-gray-600" aria-hidden="true"/>
+                <div className="ml-5">
+                    <p className="text-base font-medium text-gray-900">{fetures.text}</p>
+                    <p className="mt-1 text-sm text-gray-500">{fetures.subText}</p>
+                </div>
               </div>
             );
           })}
