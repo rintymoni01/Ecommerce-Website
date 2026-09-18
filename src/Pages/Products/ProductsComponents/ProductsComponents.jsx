@@ -1,10 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getData } from "../../../Contex/DataContex";
 import FilterSection from "./FilterSection";
 import ProductCard from "./ProductCard";
 
 const ProductsComponents = () => {
   const { data, fatchAllProducts } = getData();
+  const [search , setSearch] = useState("")
+  const [category , setCategory] =useState ("All")
+  const [brand, setBrand] = useState(All)
+  const [priceRange ,setPriceRange]
+
 
   useEffect(() => {
     fatchAllProducts();
