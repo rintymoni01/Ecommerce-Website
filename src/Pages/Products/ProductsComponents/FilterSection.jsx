@@ -44,6 +44,11 @@ const FilterSection = () => {
                                    {/* price reatting */}
 
           <h1 className=" mt-5 text-xl font-semibold mb-3">Price Range</h1>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="">Price Range: $0 - $5000</label>
+            <input type="range"  name="" id="" />
+
+          </div>
 
 
       </div>
