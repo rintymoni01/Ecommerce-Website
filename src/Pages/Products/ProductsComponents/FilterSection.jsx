@@ -1,6 +1,6 @@
 import { getData } from "../../../Contex/DataContex";
 
-const FilterSection = () => {
+const FilterSection = ({search , setSearch , brand ,setBrand , priceRange, setPriceRang}) => {
   const { categoryOnlyData, brandOnlyData } = getData();
   return (
     <div className="bg-gray-100  mt-10 p-4 rounded-md h-max">

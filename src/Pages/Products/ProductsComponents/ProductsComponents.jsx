@@ -8,7 +8,7 @@ const ProductsComponents = () => {
   const [search , setSearch] = useState("")
   const [category , setCategory] =useState ("All")
   const [brand, setBrand] = useState(All)
-  const [priceRange ,setPriceRange]
+  const [priceRange ,setPriceRange]= useState([0,500])
 
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const ProductsComponents = () => {
         {data?.length > 0 ? (
           <div className="flex gap-8">
             
-            <FilterSection />
+            <FilterSection search={search} setSearch={setSearch} brand={brand} setBrand={setBrand} priceRange={priceRange} setPriceRange={setPriceRange} category={category} setCategory={setCategory} />
 
             <div className="grid grid-cols-4 mt-10 gap-7">
               {data.map((product) => (
