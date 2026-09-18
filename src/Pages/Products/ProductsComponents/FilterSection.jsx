@@ -43,7 +43,9 @@ const FilterSection = () => {
 
                                    {/* price reatting */}
 
-                                   
+          <h1 className=" mt-5 text-xl font-semibold mb-3">Price Range</h1>
+
+
       </div>
     </div>
   );
