@@ -23,18 +23,13 @@ const FilterSection = () => {
            {/* brand only data */}
            <div>
              <h1 className=" mt-5 text-xl font-semibold">Brand</h1>
-           <div className="flex flex-col mt-3 gap-2 ">
-        {
-  brandOnlyData?.map((item, index) => (
-    <div key={index} className="flex gap-2">
-        <input type="checkbox" />
-        <button className="cursor-pointer uppercase">{item}</button>
-      {/* Apnar HTML content ekhane thakbe */}
-    </div>
-  ))
-}
-
-           </div>
+        <select name="" id="">
+            {
+                brandOnlyData?.map((item , index) =>{
+return <option key="index" value={item}>{item}</option>
+                })
+            }
+        </select>
            </div>
         </div>
     );
