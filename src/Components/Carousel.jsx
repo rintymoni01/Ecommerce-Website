@@ -30,7 +30,7 @@ const Carousel = () => {
         className={className}
       >
         <AiOutlineArrowLeft
-          className="arrows w-10 h-10 rounded-full bg-[#f53347] text-white p-2 hover:bg-[#555] transition-all cursor-pointer"
+          className="arrows w-10 h-10 rounded-full bg-[#f53347]  text-white p-2 hover:bg-[#555] transition-all cursor-pointer "
         />
       </div>
     );
@@ -45,7 +45,7 @@ const Carousel = () => {
         className={className}
       >
         <AiOutlineArrowRight
-          className="arrows w-10 h-10 rounded-full bg-[#f53347] text-white p-2 hover:bg-[#555] transition-all cursor-pointer"
+          className="arrows w-10 h-10 rounded-full bg-[#f53347]  text-white p-2 hover:bg-[#555] transition-all "
         />
       </div>
     );

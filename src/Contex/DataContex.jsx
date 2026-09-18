@@ -22,13 +22,24 @@ export const DataProvider = ({ children }) => {
       console.log(error);
     }
   };
+  const getUniqueCategory = (data, property) => {
+    let newVal = data?.map((curElem) => {
+      return curElem[property];
+    });
 
+    newVal = ["All",...new Set(newVal)];
+
+    return newVal;
+  };
+
+  const categoryOnlyData = getUniqueCategory(data, "category");
   return (
     <DataContex.Provider
       value={{
         data,
         setData,
         fatchAllProducts,
+        categoryOnlyData,
       }}
     >
       {children}
