@@ -2,7 +2,7 @@ import { getData } from "../../../Contex/DataContex";
 
 
 const FilterSection = () => {
-    const {categoryOnlyData} = getData();
+    const {categoryOnlyData , brandOnlyData} = getData();
     return (
         <div className="bg-gray-100  mt-10 p-4 rounded-md h-max">
            <input type="text" placeholder="Search..." className="bg-white p-2 rounded-md border-gray-400 border-2"/>
@@ -19,6 +19,22 @@ const FilterSection = () => {
   ))
 }
 
+           </div>
+           {/* brand only data */}
+           <div>
+             <h1 className=" mt-5 text-xl font-semibold">Brand</h1>
+           <div className="flex flex-col mt-3 gap-2 ">
+        {
+  brandOnlyData?.map((item, index) => (
+    <div key={index} className="flex gap-2">
+        <input type="checkbox" />
+        <button className="cursor-pointer uppercase">{item}</button>
+      {/* Apnar HTML content ekhane thakbe */}
+    </div>
+  ))
+}
+
+           </div>
            </div>
         </div>
     );

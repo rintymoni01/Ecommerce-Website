@@ -31,7 +31,7 @@ export const DataProvider = ({ children }) => {
 
     return newVal;
   };
-
+  const brandOnlyData = getUniqueCategory (data, "brand")
   const categoryOnlyData = getUniqueCategory(data, "category");
   return (
     <DataContex.Provider
@@ -40,6 +40,7 @@ export const DataProvider = ({ children }) => {
         setData,
         fatchAllProducts,
         categoryOnlyData,
+        brandOnlyData,
       }}
     >
       {children}
