@@ -49,6 +49,7 @@ const FilterSection = () => {
             <input type="range"  name="" id="" />
 
           </div>
+          <button>Reset Filters</button>
 
 
       </div>
