@@ -10,7 +10,7 @@ const FilterSection = () => {
            <h1 className=" mt-5 text-xl font-semibold">Category</h1>
            <div className="flex flex-col mt-3 gap-2 ">
         {
-  categoryOnlyData?.map((item, index) => (
+  categoryOnlyData?.slice(0,7).map((item, index) => (
     <div key={index} className="flex gap-2">
         <input type="checkbox" />
         <button className="cursor-pointer uppercase">{item}</button>
@@ -23,7 +23,7 @@ const FilterSection = () => {
            {/* brand only data */}
            <div>
              <h1 className=" mt-5 text-xl font-semibold">Brand</h1>
-        <select name="" id="">
+        <select name="" id="" className="bg-white w-full border-gray-200 border-2 rounded-md p-2 ">
             {
                 brandOnlyData?.map((item , index) =>{
 return <option key="index" value={item}>{item}</option>
