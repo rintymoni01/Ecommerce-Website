@@ -7,7 +7,7 @@ const ProductsComponents = () => {
   const { data, fatchAllProducts } = getData();
   const [search , setSearch] = useState("")
   const [category , setCategory] =useState ("All")
-  const [brand, setBrand] = useState(All)
+  const [brand, setBrand] = useState("All")
   const [priceRange ,setPriceRange]= useState([0,500])
 
 
