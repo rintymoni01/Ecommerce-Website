@@ -33,11 +33,12 @@ const FilterSection = ({search , setSearch , brand ,setBrand , priceRange, setPr
           name=""
           id=""
           value={brand}
+          onChange={}
           className="bg-white w-full border-gray-200 border-2 rounded-md p-2 "
         >
           {brandOnlyData?.map((item, index) => {
             return (
-              <option key="index" value={item}>
+              <option key={index} value={item}>
                 {item}
               </option>
             );

@@ -15,6 +15,13 @@ const ProductsComponents = () => {
     fatchAllProducts();
   }, []);
 
+  const handelCategoryChange =()=>{
+
+  }
+  const handelBrandChange =()=>{
+    
+  }
+
   return (
     <div>
       <div className="max-w-6xl mx-auto px-4 mb-10">
