@@ -1,4 +1,4 @@
-import FilterSection from "./ProductsComponents/FilterSection";
+
 import ProductsComponents from "./ProductsComponents/ProductsComponents";
 
 

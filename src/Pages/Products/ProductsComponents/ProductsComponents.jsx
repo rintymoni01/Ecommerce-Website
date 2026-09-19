@@ -10,7 +10,11 @@ const ProductsComponents = () => {
   const [category, setCategory] = useState("All");
   const [brand, setBrand] = useState("All");
   const [priceRange, setPriceRange] = useState([0, 5000]);
+const [page ,setPage]=useState(1)
 
+
+
+    
   useEffect(() => {
     fatchAllProducts();
   }, []);
@@ -24,12 +28,17 @@ const ProductsComponents = () => {
   const handelBrandChange = (e) => {
     setBrand(e.target.value);
   };
+  const pageHandler = (selectedPage)=>{
+    setPage(selectedPage)
+  }
+  
   const filterData = data?.filter((item)=> 
     item.title.toLowerCase().includes(search.toLowerCase()) &&
   (category ==="All" || item.category === category) &&
   (brand ==="All" || item.brand === brand) &&
   item.price >=  priceRange[0] && item.price <= priceRange[1]
    )
+
 
   return (
     <div>
@@ -52,8 +61,8 @@ const ProductsComponents = () => {
             />
 
             {/* Products */}
-            <div className="grid grid-cols-4 mt-10 gap-7 flex-1">
-              {filterData.map((product) => (
+            <div className="grid grid-cols-4  mt-10  gap-7 flex-1">
+              {filterData?.slice(0,8).map((product) => (
                 <ProductCard
                   key={product.id}
                   product={product}

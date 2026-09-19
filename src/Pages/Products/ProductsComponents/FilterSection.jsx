@@ -8,6 +8,7 @@ const FilterSection = ({
   priceRange,
   setPriceRange,
   category,
+  setCategory,
   handelCategoryChange,
   handelBrandChange,
 }) => {
@@ -100,9 +101,11 @@ const FilterSection = ({
 
       {/* Reset */}
       <button
-        onClick={handleReset}
+        
         className="bg-red-500 text-white rounded-md px-3 py-1 mt-5 cursor-pointer"
+        onClick={()=>{setSearch ("") ; setCategory('All'); setBrand('All'); setPriceRange([0,5000])}}
       >
+
         Reset Filters
       </button>
 
