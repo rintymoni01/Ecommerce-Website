@@ -8,7 +8,7 @@ const Products = () => {
     return (
         <div>
             <ProductsComponents />
-            <FilterSection/>
+            
         </div>
       
     );

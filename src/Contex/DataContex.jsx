@@ -22,17 +22,22 @@ export const DataProvider = ({ children }) => {
       console.log(error);
     }
   };
+
+  // Get unique category / brand
   const getUniqueCategory = (data, property) => {
-    let newVal = data?.map((curElem) => {
-      return curElem[property];
-    });
+    const newVal = data
+      ?.map((curElem) => curElem[property])
+      .filter(Boolean);
 
-    newVal = ["All",...new Set(newVal)];
-
-    return newVal;
+    return ["All", ...new Set(newVal)];
   };
-  const brandOnlyData = getUniqueCategory (data, "brand")
+
+  // Unique brand
+  const brandOnlyData = getUniqueCategory(data, "brand");
+
+  // Unique category
   const categoryOnlyData = getUniqueCategory(data, "category");
+
   return (
     <DataContex.Provider
       value={{
@@ -47,4 +52,5 @@ export const DataProvider = ({ children }) => {
     </DataContex.Provider>
   );
 };
-export const getData = ()=>useContext(DataContex)
+
+export const getData = () => useContext(DataContex);
