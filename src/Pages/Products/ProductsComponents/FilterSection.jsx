@@ -1,7 +1,7 @@
 import { getData } from "../../../Contex/DataContex";
 
-const FilterSection = ({search , setSearch , brand ,setBrand , priceRange, setPriceRang , category, setCategory , handelCategoryChange, handelBrandChange}) => {
-  const { categoryOnlyData, brandOnlyData } = getData();
+const FilterSection = ({search , setSearch , brand , priceRange, setPriceRang , category, }) => {
+  const { categoryOnlyData, brandOnlyData , handelCategoryChange, handelBrandChange } = getData();
   return (
     <div className="bg-gray-100  mt-10 p-4 rounded-md h-max">
       <input
@@ -19,7 +19,7 @@ const FilterSection = ({search , setSearch , brand ,setBrand , priceRange, setPr
       <div className="flex flex-col mt-3 gap-2 ">
         {categoryOnlyData?.slice(0, 7).map((item, index) => (
           <div key={index} className="flex gap-2">
-            <input type="checkbox" name={item} checked ={category===item} value={item} onChange={} />
+            <input type="checkbox" name={item} checked ={category===item} value={item} onChange={handelCategoryChange} />
             <button className="cursor-pointer uppercase">{item}</button>
             {/* Apnar HTML content ekhane thakbe */}
           </div>
@@ -33,7 +33,7 @@ const FilterSection = ({search , setSearch , brand ,setBrand , priceRange, setPr
           name=""
           id=""
           value={brand}
-          onChange={}
+          onChange={handelBrandChange}
           className="bg-white w-full border-gray-200 border-2 rounded-md p-2 "
         >
           {brandOnlyData?.map((item, index) => {
