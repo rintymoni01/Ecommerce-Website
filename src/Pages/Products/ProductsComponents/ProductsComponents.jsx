@@ -15,11 +15,12 @@ const ProductsComponents = () => {
     fatchAllProducts();
   }, []);
 
-  const handelCategoryChange =()=>{
+  const handelCategoryChange =(e)=>{
+    setCategory(e.terget.value)
 
   }
-  const handelBrandChange =()=>{
-    
+  const handelBrandChange =(e)=>{
+    setBrand(e.terget.value)
   }
 
   return (
@@ -28,7 +29,7 @@ const ProductsComponents = () => {
         {data?.length > 0 ? (
           <div className="flex gap-8">
             
-            <FilterSection search={search} setSearch={setSearch} brand={brand} setBrand={setBrand} priceRange={priceRange} setPriceRange={setPriceRange} category={category} setCategory={setCategory} />
+            <FilterSection search={search} setSearch={setSearch} brand={brand} setBrand={setBrand} priceRange={priceRange} setPriceRange={setPriceRange} category={category} setCategory={setCategory} handelCategoryChange={handelCategoryChange} handelBrandChange={handelBrandChange} />
 
             <div className="grid grid-cols-4 mt-10 gap-7">
               {data.map((product) => (
