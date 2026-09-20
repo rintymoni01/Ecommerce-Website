@@ -4,6 +4,7 @@ import FilterSection from "./FilterSection";
 import ProductCard from "./ProductCard";
 import Pagnation from "./Pagnation";
 
+
 const ProductsComponents = () => {
   const { data, fatchAllProducts } = getData();
 
@@ -75,25 +76,36 @@ const ProductsComponents = () => {
                 handelCategoryChange={handelCategoryChange}
                 handelBrandChange={handelBrandChange}
               />
-
-              {/* Products Grid */}
-              <div className="flex-1">
+{
+  filterData?.length > 0 ? (
+    <div className="flex flex-col gap-6 items-center">
+      
                 <div className="grid grid-cols-4 mt-10 gap-7">
                   {filterData?.slice(page * 8 - 8, page * 8).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
                 </div>
-              </div>
-            </div>
-
-            {/* Pagination Component কে সঠিক জায়গায় রাখা হয়েছে */}
-            <div className="mt-8">
-              <Pagnation 
+                 <Pagnation 
                 pageHandler={pageHandler} 
                 page={page} 
                 dynamicPage={dynamicPage}
                 totalProducts={filterData?.length || 0} 
               />
+              </div>
+  
+  ):(
+    <div className="flex justify-center items-center md:h-[60px] md:w-[900px] mt-10">
+     
+    </div>
+  )
+}
+              {/* Products Grid */}
+             
+            </div>
+
+            {/* Pagination Component কে সঠিক জায়গায় রাখা হয়েছে */}
+            <div className="mt-8">
+             
             </div>
           </div>
         ) : (

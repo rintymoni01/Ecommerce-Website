@@ -21,7 +21,7 @@ const FilterSection = ({
   };
 
   return (
-    <div className="bg-gray-100 mt-10 p-4 rounded-md h-max w-64">
+    <div className="bg-gray-100 mt-10 p-4 rounded-md h-max w-68">
 
       {/* Search */}
       <input
@@ -37,7 +37,7 @@ const FilterSection = ({
         Category
       </h1>
 
-      <div className="flex flex-col mt-3 gap-2">
+      <div className="flex flex-col text-sm mt-3 gap-2">
         {categoryOnlyData?.map((item, index) => (
           <div key={index} className="flex gap-2 items-center">
             <input
