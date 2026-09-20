@@ -5,11 +5,13 @@ import MidBanner from "./HomeComponents/MidBanner";
 
 const Home = () => {
     return (
-        <div>
-     <Carousel></Carousel>
+      
+   <div>
+      <Carousel></Carousel>
      <MidBanner></MidBanner>
      <Fetures></Fetures>
-        </div>
+   </div>
+        
     );
 };
 

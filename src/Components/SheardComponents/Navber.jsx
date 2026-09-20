@@ -23,7 +23,7 @@ const toggleDropdown =()=>{
         <div className="flex gap-7 items-center">
 
           <Link to="/" className="text-3xl font-bold">
-            <span className="text-red-500 font-serif">R</span>inty
+            <span className="text-red-500 font-serif">SR</span>moni
           </Link>
 
           <div className="text-gray-700 flex items-center gap-1 cursor-pointer">
