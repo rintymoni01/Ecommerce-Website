@@ -6,9 +6,11 @@ if (total <= 5){
         pages.push(i)
 }else{
     if(current <= 3){
-        page.push(1,2,3,"...", total)
+        pages.push(1,2,3,"...", total)
     }else if(current >= total-2){
-        page.push(1,"...", total-2, total-1, total)
+        pages.push(1,"...", total-2, total-1, total)
+    }else {
+        pages.push(1,"...", current-1, current,current+1 , "...", total  )
     }
 }
     }
@@ -20,6 +22,11 @@ if (total <= 5){
         rounded-md cursor-pointer`} >
         Prev
       </button>
+      {
+        getPages(page ,dynamicPage).map((item, index)=>{
+            return
+        })
+      }
 
       <button  disabled={page === dynamicPage}
         className={`${page === dynamicPage ? "bg-red-400" : "bg-red-500"} text-white px-3 py-1 
