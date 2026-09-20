@@ -1,4 +1,4 @@
-const Pagnation = ({ page, pageHandler }) => {
+const Pagnation = ({ page, pageHandler ,dynamicPage }) => {
   return (
     <div className="mt-10 space-x-4">
       <button
@@ -9,7 +9,7 @@ const Pagnation = ({ page, pageHandler }) => {
       </button>
 
       <button  disabled={page === 1}
-        className={`${page === 1 ? "bg-red-400" : "bg-red-500"} text-white px-3 py-1 
+        className={`${page === dynamicPage ? "bg-red-400" : "bg-red-500"} text-white px-3 py-1 
         rounded-md cursor-pointer`}>Next</button>
     </div>
   );

@@ -91,6 +91,7 @@ const ProductsComponents = () => {
               <Pagnation 
                 pageHandler={pageHandler} 
                 page={page} 
+                dynamicPage={dynamicPage}
                 totalProducts={filterData?.length || 0} 
               />
             </div>
