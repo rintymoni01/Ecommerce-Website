@@ -4,6 +4,12 @@ const pages =[];
 if (total <= 5){
     for(let i =1; i <= total; i++)
         pages.push(i)
+}else{
+    if(current <= 3){
+        page.push(1,2,3,"...", total)
+    }else if(current >= total-2){
+        page.push(1,"...", total-2, total-1, total)
+    }
 }
     }
   return (

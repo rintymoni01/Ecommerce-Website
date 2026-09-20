@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
   console.log(product);
     
   return (
-   <div className="border relative border-gray-100 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all cursor-pointer p-4 flex flex-col justify-between h-[280px]"> 
+   <div className="border relative border-gray-100 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all cursor-pointer p-4 flex flex-col justify-between h-[310px]"> 
   <div>
     <img src={product.images} alt="" className="bg-gray-100 aspect-square w-full object-cover rounded-lg"/> 
     {/* মিনিমাম হাইট দিয়ে টাইটেল এর জায়গা ফিক্সড করে দেওয়া */}
