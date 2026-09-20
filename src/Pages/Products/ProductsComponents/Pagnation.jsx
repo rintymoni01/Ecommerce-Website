@@ -1,14 +1,18 @@
+const Pagnation = ({ page, pageHandler }) => {
+  return (
+    <div className="mt-10 space-x-4">
+      <button
+        disabled={page === 1}
+        className={`${page === 1 ? "bg-red-400" : "bg-red-500"} text-white px-3 py-1 
+        rounded-md cursor-pointer`} >
+        Prev
+      </button>
 
-const Pagnation = ({page , pageHandler}) => {
-    return (
-        <div className="mt-10 space-x-4">
-            <button className={`${page === 1 ? "bg-red-400" : "bg-red-500"}`}>Prev</button>
-
-            <button>Next</button>
-
-           
-        </div>
-    );
+      <button  disabled={page === 1}
+        className={`${page === 1 ? "bg-red-400" : "bg-red-500"} text-white px-3 py-1 
+        rounded-md cursor-pointer`}>Next</button>
+    </div>
+  );
 };
 
 export default Pagnation;

@@ -38,6 +38,8 @@ const ProductsComponents = () => {
     setPage(selectedPage);
   };
 
+
+
   const filterData = data?.filter(
     (item) =>
       item.title.toLowerCase().includes(search.toLowerCase()) &&
@@ -46,6 +48,7 @@ const ProductsComponents = () => {
       item.price >= priceRange[0] &&
       item.price <= priceRange[1]
   );
+    const dynamicPage = Math.ceil(filterData?.length / 8)
 
   return (
     <div>
