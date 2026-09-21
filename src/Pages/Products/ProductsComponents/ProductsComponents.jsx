@@ -19,7 +19,7 @@ const ProductsComponents = () => {
     window.scrollTo(0,0)
   }, []);
 
-  // Category change (ফিল্টার করলে পেজ ১ এ নিয়ে আসার জন্য setPage(1) যুক্ত করা হয়েছে)
+  // Category change 
 
 
 
@@ -28,7 +28,7 @@ const ProductsComponents = () => {
     setPage(1);
   };
 
-  // Brand change (ফিল্টার করলে পেজ ১ এ নিয়ে আসার জন্য setPage(1) যুক্ত করা হয়েছে)
+  // Brand change 
 
 
   const handelBrandChange = (e) => {

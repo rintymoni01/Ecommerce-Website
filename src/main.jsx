@@ -15,6 +15,7 @@ import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Cart from "./Pages/Cart/Cart";
 import { DataProvider } from "./Contex/DataContex";
+import SingleProducts from "./Pages/Products/ProductsComponents/SingleProducts";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+      },
+       {
+        path: "/products/:id",
+        element: <SingleProducts />,
       },
       {
         path: "/about",
