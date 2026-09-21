@@ -52,7 +52,7 @@ const SingleProducts = () => {
 
               <p className="text-gray-500 mt-3">{singleProduct.description}</p>
 
-              <h2 className="text-2xl font-bold mt-5">
+              <h2 className="text-2xl text-red-500 font-bold mt-5">
                 ${singleProduct.price}
               </h2>
             </div>
