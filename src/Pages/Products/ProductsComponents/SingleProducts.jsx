@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -11,9 +10,7 @@ const SingleProducts = () => {
 
   const getSingleProduct = async () => {
     try {
-      const res = await axios.get(
-        `https://dummyjson.com/products/${id}`
-      );
+      const res = await axios.get(`https://dummyjson.com/products/${id}`);
 
       console.log(res.data);
 
@@ -34,7 +31,6 @@ const SingleProducts = () => {
           <Breadcrums title={singleProduct.title} />
 
           <div className="max-w-6xl md:p-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-
             {/* Product Image */}
             <div className="w-full">
               <img
@@ -50,27 +46,21 @@ const SingleProducts = () => {
                 {singleProduct.title}
               </h1>
               <div className="text-gray-700">
-                {singleProduct.brand?.toUpperCase()}/ {singleProduct.category?.toUpperCase}
+                {singleProduct.brand?.toUpperCase()}/{" "}
+                {singleProduct.category?.toUpperCase()}
               </div>
 
-              <p className="text-gray-500 mt-3">
-                {singleProduct.description}
-              </p>
+              <p className="text-gray-500 mt-3">{singleProduct.description}</p>
 
               <h2 className="text-2xl font-bold mt-5">
                 ${singleProduct.price}
               </h2>
             </div>
-
           </div>
         </div>
       ) : (
         <div className="flex items-center justify-center h-screen">
-          <img
-            src="/Image/sample.gif"
-            alt="Loading..."
-            className="w-20 h-20"
-          />
+          <img src="/Image/sample.gif" alt="Loading..." className="w-20 h-20" />
         </div>
       )}
     </>
@@ -78,4 +68,3 @@ const SingleProducts = () => {
 };
 
 export default SingleProducts;
-
