@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
    <div className="border relative border-gray-100 rounded-2xl hover:scale-105 hover:shadow-2xl transition-all cursor-pointer p-4 flex flex-col justify-between h-[340px]"> 
   <div>
     <img src={product.images} alt="" className="bg-gray-100 aspect-square w-full object-cover rounded-lg" onClick={()=>navigate(`/products/${product.id}`)}/> 
-    {/* মিনিমাম হাইট দিয়ে টাইটেল এর জায়গা ফিক্সড করে দেওয়া */}
+   
     <h1 className="line-clamp-2 py-1 font-semibold h-[48px]">{product.title}</h1> 
     <p className="my-1 text-lg text-gray-800 font-bold">${product.price}</p> 
   </div>
