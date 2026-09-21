@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const SingleProducts = () => {
-
   const params = useParams();
-  const [singleProduct , setSingleProduct] =useState('')
+  const [singleProduct, setSingleProduct] = useState("");
   console.log(params);
 };
 const getsingleProduct = async () => {
@@ -15,11 +14,8 @@ const getsingleProduct = async () => {
     );
     console.log(res);
     const product = res.data.product;
-   setSingleProduct(product)
-console.log(product);
-
-
-
+    setSingleProduct(product);
+    console.log(product);
   } catch (error) {
     console.log(error);
   }
@@ -27,7 +23,19 @@ console.log(product);
     getsingleProduct();
   }, []);
 
-  return <div>hjjshs</div>;
+  return (
+    <>
+      {singleProduct ? (
+        <div className="px-4 pb-4 md:px-0">
+            <Breadcrums title={singleProduct.title} />
+        </div>
+      ) : (
+        <div className="flex items-center justify-center h-screen">
+          <img src="/Image/sample.gif" alt="Loading..." className="w-20 h-20" />
+        </div>
+      )}
+    </>
+  );
 };
 
 export default SingleProducts;
