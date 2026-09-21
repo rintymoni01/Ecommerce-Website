@@ -46,9 +46,12 @@ const SingleProducts = () => {
 
             {/* Product Details */}
             <div>
-              <h1 className="md:text-3xl font-bold">
+              <h1 className="md:text-3xl font-bold text-gray-800">
                 {singleProduct.title}
               </h1>
+              <div className="text-gray-700">
+                {singleProduct.brand?.toUpperCase()}/ {singleProduct.category?.toUpperCase}
+              </div>
 
               <p className="text-gray-500 mt-3">
                 {singleProduct.description}
