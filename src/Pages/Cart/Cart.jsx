@@ -2,6 +2,8 @@ import { useCart } from "../../Contex/CardContex";
 
 const Cart = () => {
   const { cartItem } = useCart();
+  console.log(cartItem);
+
   return (
     <div className="mt-10 max-w-6xl mx-auto mb-5">
       {cartItem.length > 0 ? (
@@ -30,6 +32,12 @@ const Cart = () => {
                         </p>
                       </div>
                     </div>
+                    <div className="bg-red-500 text-white flex gap-4 p-2 font-bold rounded-md text-xl">
+                      <button className="cursor-pointer">-</button>
+                      <span>{item.minimumOrderQuantity}</span>
+                      <button className="cursor-pointer">+</button>
+                    </div>
+                    <span></span>
                   </div>
                 );
               })}
