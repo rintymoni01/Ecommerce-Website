@@ -10,7 +10,17 @@ const Cart = () => {
         cartItem.length > 0 ? <div>
             <h1 className="font-bold text-2xl ">My Cart ({cartItem.length})</h1>
             <div>
-                <div className="mt-10"></div>
+                <div className="mt-10">
+                    {
+                        cartItem.map((item, index)=>{
+                            return <div key={index}>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                        })
+                    }
+                </div>
             </div>
         </div>: <div>cart is empty</div>
       }
