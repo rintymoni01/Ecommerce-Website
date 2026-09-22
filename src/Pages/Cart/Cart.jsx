@@ -38,30 +38,53 @@ const Cart = () => {
                       <span>{item.minimumOrderQuantity}</span>
                       <button className="cursor-pointer">+</button>
                     </div>
-                    <span className="hover hover:bg-white/60 transition-all rounded-full p-3 hover:shadow-2xl"><FaRegTrashAlt  className="text-red-500  text-2xl cursor-pointer"/></span>
+                    <span className="hover hover:bg-white/60 transition-all rounded-full p-3 hover:shadow-2xl">
+                      <FaRegTrashAlt className="text-red-500  text-2xl cursor-pointer" />
+                    </span>
                   </div>
                 );
               })}
             </div>
             <div className="grid grid-cols-2 gap-20">
-                <div className="bg-gray-100 rounded-md  p-7 mt-4 space-y-2">
-                    <h1 className="text-gray-800 font-bold text-xl">Delivery Info</h1>
-                    <div className="flex flex-col space-y-1">
-                        <label htmlFor="">Full Name</label>
-                        <input type="text"  placeholder="Enter your name" className="p-2  rounded-md "/>
-                    </div>
-                    <div className="flex flex-col space-y-1">
-                         <label htmlFor="">Address</label>
-<input type="text"  placeholder="Enter your address" className="p-2  rounded-md "/>
-                    </div>
-                    <div className="w-full gap-5">
-                        <div className="flex flex-col space-y-1">
-
-                        </div>
-
-                    </div>
+              <div className="bg-gray-100 rounded-md  p-7 mt-4 space-y-2">
+                <h1 className="text-gray-800 font-bold text-xl">
+                  Delivery Info
+                </h1>
+                <div className="flex flex-col space-y-1">
+                  <label htmlFor="">Full Name</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="p-2  rounded-md "
+                  />
                 </div>
-
+                <div className="flex flex-col space-y-1">
+                  <label htmlFor="">Address</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your address"
+                    className="p-2  rounded-md "
+                  />
+                </div>
+                <div className="flex w-full gap-5">
+                  <div className="flex flex-col space-y-1 w-full">
+                    <label htmlFor="">State</label>
+                    <input
+                      type="text"
+                      placeholder="Enter your state "
+                      className="p-2 rounded-md w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col space-y-1 w-full">
+                    <label htmlFor="">PostCode</label>
+                    <input
+                      type="text"
+                      placeholder="Enter your postcode"
+                      className="p-2 rounded-md w-full"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
