@@ -164,12 +164,12 @@ const Cart = () => {
                 <div>
                   <h1 className="font-semibold  text-gray-700 mb-3 mt-7 ">Apply promo code</h1>
                   <div className="flex gap-3">
-                    <input type="text" placeholder="Enter code" className="p-2 rounded-mdw-full"/>
+                    <input type="text" placeholder="Enter code" className="p-2 border border-gray-200 rounded-md w-full "/>
                     <button className="bg-white text-black border border-gray-200 px-4 cursor-pointer py-1 rounded-md">Apply</button>
 
                   </div>
                 </div>
-                
+                <button className="bg-red-500 text-white  px-3 py-2 rounded-md w-full cursor-pointer mt-3">Proceed to Checkout</button>
               </div>
             </div>
           </div>
