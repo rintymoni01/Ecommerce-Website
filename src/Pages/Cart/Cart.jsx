@@ -2,6 +2,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { useCart } from "../../Contex/CardContex";
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
+import { GiShoppingBag } from "react-icons/gi";
 const Cart = () => {
   const { cartItem } = useCart();
   console.log(cartItem);
@@ -131,12 +132,28 @@ const Cart = () => {
                   <p>${totalPrice}</p>
                 </div>
                 <div className=" flex justify-between items-center ">
-                     <h1 className="flex gap-1 items-center text-gray-700">
+                  <h1 className="flex gap-1 items-center text-gray-700">
                     <span>
                       <MdDeliveryDining />
                     </span>
                     Delivery Charge
                   </h1>
+                  <p className="text-red-500 font-semibold">
+                    <span className="text-gray-600 line-through">$25 </span>{" "}
+                    FREE
+                  </p>
+                </div>
+                   <div className=" flex justify-between items-center ">
+                  <h1 className="flex gap-1 items-center text-gray-700">
+                    <span>
+                      <GiShoppingBag />
+                    </span>
+                    Hindling
+                  </h1>
+                  <p className="text-red-500 font-semibold">
+                    <span className="text-gray-600 line-through">$25 </span>{" "}
+                    FREE
+                  </p>
                 </div>
               </div>
             </div>
