@@ -156,8 +156,8 @@ const Cart = () => {
                   </p>
                 </div>
                 <hr  className="text-gray-200 mt-2"/>
-                <div>
-                  
+                <div className="flex justify-between items-center">
+
                 </div>
               </div>
             </div>
