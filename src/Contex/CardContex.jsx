@@ -34,14 +34,18 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+
+
+
+ 
+
   // Increase quantity
   const increaseQuantity = (id) => {
     setCartItem((prevCart) =>
       prevCart.map((item) =>
         item.id === id
           ? {
-              ...item,
-              quantity: item.quantity + 1,
+              ...item,quantity: item.quantity + 1,
             }
           : item
       )
@@ -71,6 +75,22 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+
+
+   const updateQuantity = (cartItem , productId , action) =>{
+ cartItem.map(item =>{
+  if(item.id === productId){
+    let newUnit = item.quantity;
+    if(action === "increase"){
+      newUnit = newUnit + 1
+    }else if (action === "decrease"){
+      newUnit = newUnit -1
+    }
+    return newUnit >0 ? {...item, quantity: newUnit} : null
+  }
+  return item ;
+ }).filter (item=> item != null)  //  remove item quantity 0
+  }
   return (
     <CartContex.Provider
       value={{
@@ -80,6 +100,7 @@ export const CartProvider = ({ children }) => {
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
+        updateQuantity,
       }}
     >
       {children}

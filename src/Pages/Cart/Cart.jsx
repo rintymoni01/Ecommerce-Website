@@ -15,6 +15,7 @@ const Cart = () => {
     increaseQuantity,
     decreaseQuantity,
     removeFromCart,
+    updateQuantity,
   } = useCart();
 
   const { user } = useUser();
