@@ -11,7 +11,7 @@ import {
 } from "@clerk/clerk-react";
 import { useCart } from "../../Contex/CardContex";
 
-const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
+const Navber = ({ location, getLocation, openDropdown, setOpenDropdown  }) => {
 const { cartItem } = useCart();
   const toggleDropdown = () => {
     setOpenDropdown(!openDropdown);

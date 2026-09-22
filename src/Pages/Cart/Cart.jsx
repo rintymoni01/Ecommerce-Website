@@ -4,7 +4,9 @@ import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
 import { useUser } from "@clerk/clerk-react";
-const Cart = ({location ,getLocation}) => {
+import { useOutletContext } from "react-router-dom";
+const Cart = () => {
+  const { location, getLocation } = useOutletContext();
   const { cartItem } = useCart();
   
   
@@ -59,6 +61,7 @@ const {user} = useUser()
                   <label htmlFor="">Full Name</label>
                   <input
                     type="text" 
+                    value={user?.fullName || ""}
                     placeholder="Enter your name"
                     className="p-2  rounded-md "
                   />
@@ -67,17 +70,18 @@ const {user} = useUser()
                   <label htmlFor="">Address</label>
                   <input
                     type="text"
-                    value={location.country}
+                  value={location?.road || location?.suburb || location?.city || ""}
                     placeholder="Enter your address"
                     className="p-2  rounded-md "
                   />
                 </div>
                 <div className="flex w-full gap-5">
                   <div className="flex flex-col space-y-1 w-full">
-                    <label htmlFor="">State</label>
+                    <label htmlFor="">Country</label>
                     <input
                       type="text"
-                      value={location.state}
+                      value={location?.country || ""}
+                      
                       placeholder="Enter your state "
                       className="p-2 rounded-md w-full"
                     />
@@ -86,6 +90,7 @@ const {user} = useUser()
                     <label htmlFor="">PostCode</label>
                     <input
                       type="text"
+                      value={location?.postcode || ""}
                       placeholder="Enter your postcode"
                       className="p-2 rounded-md w-full"
                     />
@@ -93,9 +98,10 @@ const {user} = useUser()
                 </div>
                 <div className="flex w-full gap-5">
                   <div className="flex flex-col space-y-1 w-full">
-                    <label htmlFor="">Country</label>
+                    <label htmlFor="">State</label>
                     <input
                       type="text"
+                      value={location?.state || ""}
                       placeholder="Enter your country "
                       className="p-2 rounded-md w-full"
                     />

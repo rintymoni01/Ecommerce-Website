@@ -42,12 +42,17 @@ const Root = () => {
 
   return (
     <div>
-      <Navber
-        location={location} getLocation={getLocation} openDropdown={openDropdown} setOpenDropdown={setOpenDropdown} />
+    <Navber
+      location={location}
+      getLocation={getLocation}
+      openDropdown={openDropdown}
+      setOpenDropdown={setOpenDropdown}
+    />
 
-      <Outlet />
-      <Footer/>
-    </div>
+    <Outlet context={{ location, getLocation }} />
+
+    <Footer />
+  </div>
   );
 };
 
