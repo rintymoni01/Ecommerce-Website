@@ -3,11 +3,13 @@ import { useCart } from "../../Contex/CardContex";
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
-const Cart = () => {
+import { useUser } from "@clerk/clerk-react";
+const Cart = ({location ,getLocation}) => {
   const { cartItem } = useCart();
-  console.log(cartItem);
+  
+  
   const totalPrice = cartItem.reduce((total, item) => total + item.price, 0);
-
+const {user} = useUser()
   return (
     <div className="mt-10 max-w-6xl mx-auto mb-5">
       {cartItem.length > 0 ? (
@@ -56,7 +58,7 @@ const Cart = () => {
                 <div className="flex flex-col space-y-1">
                   <label htmlFor="">Full Name</label>
                   <input
-                    type="text"
+                    type="text" 
                     placeholder="Enter your name"
                     className="p-2  rounded-md "
                   />
@@ -65,6 +67,7 @@ const Cart = () => {
                   <label htmlFor="">Address</label>
                   <input
                     type="text"
+                    value={location.country}
                     placeholder="Enter your address"
                     className="p-2  rounded-md "
                   />
@@ -74,6 +77,7 @@ const Cart = () => {
                     <label htmlFor="">State</label>
                     <input
                       type="text"
+                      value={location.state}
                       placeholder="Enter your state "
                       className="p-2 rounded-md w-full"
                     />
