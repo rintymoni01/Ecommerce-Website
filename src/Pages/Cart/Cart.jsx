@@ -1,3 +1,4 @@
+import { FaRegTrashAlt } from "react-icons/fa";
 import { useCart } from "../../Contex/CardContex";
 
 const Cart = () => {
@@ -37,7 +38,7 @@ const Cart = () => {
                       <span>{item.minimumOrderQuantity}</span>
                       <button className="cursor-pointer">+</button>
                     </div>
-                    <span></span>
+                    <span className="hover hover:bg-white/60 transition-all rounded-full p-3 hover:shadow-2xl"><FaRegTrashAlt  className="text-red-500  text-2xl cursor-pointer"/></span>
                   </div>
                 );
               })}
