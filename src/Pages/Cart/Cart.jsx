@@ -151,9 +151,13 @@ const Cart = () => {
                     Hindling
                   </h1>
                   <p className="text-red-500 font-semibold">
-                    <span className="text-gray-600 line-through">$25 </span>{" "}
-                    FREE
+                 
+                   $5
                   </p>
+                </div>
+                <hr  className="text-gray-200 mt-2"/>
+                <div>
+                  
                 </div>
               </div>
             </div>
