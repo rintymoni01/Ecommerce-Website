@@ -1,5 +1,6 @@
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useCart } from "../../Contex/CardContex";
+import { LuNotebookText } from "react-icons/lu";
 
 const Cart = () => {
   const { cartItem } = useCart();
@@ -102,11 +103,27 @@ const Cart = () => {
                     />
                   </div>
                 </div>
-                <button className="bg-red-500 text-white px-3 py-1 rounded-md mt-3 cursor-pointer">Submit</button>
+                <button className="bg-red-500 text-white px-3 py-1 rounded-md mt-3 cursor-pointer">
+                  Submit
+                </button>
+  <div className="flex items-center justify-center w-full text-gray-700">
+                --------OR--------
               </div>
-              <div className="flex items-center justify-center w-full text-gray-700">
 
+                 <div className="flex justify-center">
+                <button className="bg-red-500  text-white px-3 py-2 rounded-md">
+                  Detect Location
+                </button>
               </div>
+              </div>
+            <div className="bg-white border border-gray-100 shadow-xl rounded-md p-7 mt-4 space-y-2 h-max">
+                <h1 className="text-gray-800 font-bold text-xl">Bill Details</h1>
+                <div className="flex justify-between items-center">
+                    <h1><span><LuNotebookText /></span>Items total</h1>
+
+                </div>
+            </div>
+             
             </div>
           </div>
         </div>
