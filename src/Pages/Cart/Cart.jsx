@@ -157,6 +157,7 @@ const Cart = () => {
                 </div>
                 <hr  className="text-gray-200 mt-2"/>
                 <div className="flex justify-between items-center">
+                  <h1 className="font-semibold text-lg">Grand total</h1>
 
                 </div>
               </div>
