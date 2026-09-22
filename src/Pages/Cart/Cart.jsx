@@ -161,6 +161,15 @@ const Cart = () => {
                   <p className="font-semibold text-lg">${totalPrice +5}</p>
 
                 </div>
+                <div>
+                  <h1 className="font-semibold  text-gray-700 mb-3 mt-7 ">Apply promo code</h1>
+                  <div className="flex gap-3">
+                    <input type="text" placeholder="Enter code" className="p-2 rounded-mdw-full"/>
+                    <button className="bg-white text-black border border-gray-200 px-4 cursor-pointer py-1 rounded-md">Apply</button>
+
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
