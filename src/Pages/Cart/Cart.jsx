@@ -48,7 +48,16 @@ const Cart = () => {
                     <h1 className="text-gray-800 font-bold text-xl">Delivery Info</h1>
                     <div className="flex flex-col space-y-1">
                         <label htmlFor="">Full Name</label>
-                        <input type="text"  placeholder="Enter your name"/>
+                        <input type="text"  placeholder="Enter your name" className="p-2  rounded-md "/>
+                    </div>
+                    <div className="flex flex-col space-y-1">
+                         <label htmlFor="">Address</label>
+<input type="text"  placeholder="Enter your address" className="p-2  rounded-md "/>
+                    </div>
+                    <div className="w-full gap-5">
+                        <div className="flex flex-col space-y-1">
+
+                        </div>
 
                     </div>
                 </div>
