@@ -1,10 +1,7 @@
+import { createContext } from "react";
 
-const CartContex = () => {
-    return (
-        <div>
-            dfgsg
-        </div>
-    );
-};
+export const CartContex = createContext (null)
 
-export default CartContex;
+export const CartProvider = ({children})=> {
+
+}
