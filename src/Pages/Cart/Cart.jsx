@@ -1,11 +1,11 @@
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useCart } from "../../Contex/CardContex";
 import { LuNotebookText } from "react-icons/lu";
-
+import { MdDeliveryDining } from "react-icons/md";
 const Cart = () => {
   const { cartItem } = useCart();
   console.log(cartItem);
-  const totalPrice = cartItem.reduce((total, item)=>total+ item.price, 0)
+  const totalPrice = cartItem.reduce((total, item) => total + item.price, 0);
 
   return (
     <div className="mt-10 max-w-6xl mx-auto mb-5">
@@ -107,27 +107,38 @@ const Cart = () => {
                 <button className="bg-red-500 text-white px-3 py-1 rounded-md mt-3 cursor-pointer">
                   Submit
                 </button>
-  <div className="flex items-center justify-center w-full text-gray-700">
-                --------OR--------
-              </div>
+                <div className="flex items-center justify-center w-full text-gray-700">
+                  --------OR--------
+                </div>
 
-                 <div className="flex justify-center">
-                <button className="bg-red-500  text-white px-3 py-2 rounded-md">
-                  Detect Location
-                </button>
+                <div className="flex justify-center">
+                  <button className="bg-red-500  text-white px-3 py-2 rounded-md">
+                    Detect Location
+                  </button>
+                </div>
               </div>
-              </div>
-            <div className="bg-white border border-gray-100 shadow-xl rounded-md p-7 mt-4 space-y-2 h-max">
-                <h1 className="text-gray-800 font-bold text-xl">Bill Details</h1>
+              <div className="bg-white border border-gray-100 shadow-xl rounded-md p-7 mt-4 space-y-2 h-max">
+                <h1 className="text-gray-800 font-bold text-xl">
+                  Bill Details
+                </h1>
                 <div className="flex justify-between items-center">
-                    <h1 className="flex gap-1 items-center text-gray-700"><span><LuNotebookText /></span>Items total</h1>
-<p>${totalPrice}</p>
+                  <h1 className="flex gap-1 items-center text-gray-700">
+                    <span>
+                      <LuNotebookText />
+                    </span>
+                    Items total
+                  </h1>
+                  <p>${totalPrice}</p>
                 </div>
-                <div className="">
-
+                <div className=" flex justify-between items-center ">
+                     <h1 className="flex gap-1 items-center text-gray-700">
+                    <span>
+                      <MdDeliveryDining />
+                    </span>
+                    Delivery Charge
+                  </h1>
                 </div>
-            </div>
-             
+              </div>
             </div>
           </div>
         </div>
