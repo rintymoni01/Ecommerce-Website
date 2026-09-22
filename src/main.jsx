@@ -1,6 +1,6 @@
 import "./index.css";
-
 import ReactDOM from "react-dom/client";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,6 +16,9 @@ import Contact from "./Pages/Contact/Contact";
 import Cart from "./Pages/Cart/Cart";
 import { DataProvider } from "./Contex/DataContex";
 import SingleProducts from "./Pages/Products/ProductsComponents/SingleProducts";
+import { CartProvider } from "./Contex/CardContex";
+
+
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -36,7 +39,7 @@ const router = createBrowserRouter([
         path: "/products",
         element: <Products />,
       },
-       {
+      {
         path: "/products/:id",
         element: <SingleProducts />,
       },
@@ -64,7 +67,9 @@ ReactDOM.createRoot(root).render(
     afterSignOutUrl="/"
   >
     <DataProvider>
-    <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </DataProvider>
   </ClerkProvider>
 );

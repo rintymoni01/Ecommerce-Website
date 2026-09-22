@@ -1,11 +1,10 @@
-import CartContex from "./CartComponents/CartContex";
 
 
 
 const Cart = () => {
     return (
         <div>
-        <CartContex></CartContex>
+       wqe3wer
         </div>
     );
 };
