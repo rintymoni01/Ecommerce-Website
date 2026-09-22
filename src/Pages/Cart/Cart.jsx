@@ -84,6 +84,28 @@ const Cart = () => {
                     />
                   </div>
                 </div>
+                <div className="flex w-full gap-5">
+                  <div className="flex flex-col space-y-1 w-full">
+                    <label htmlFor="">Country</label>
+                    <input
+                      type="text"
+                      placeholder="Enter your country "
+                      className="p-2 rounded-md w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col space-y-1 w-full">
+                    <label htmlFor="">Phone No</label>
+                    <input
+                      type="text"
+                      placeholder="Enter your number"
+                      className="p-2 rounded-md w-full"
+                    />
+                  </div>
+                </div>
+                <button className="bg-red-500 text-white px-3 py-1 rounded-md mt-3 cursor-pointer">Submit</button>
+              </div>
+              <div className="flex items-center justify-center w-full text-gray-700">
+
               </div>
             </div>
           </div>
