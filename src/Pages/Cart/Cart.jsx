@@ -42,7 +42,7 @@ const {user} = useUser()
                     </div>
                     <div className="bg-red-500 text-white flex gap-4 p-2 font-bold rounded-md text-xl">
                       <button className="cursor-pointer">-</button>
-                      <span>{item.minimumOrderQuantity}</span>
+                      <span>{item.quantity}</span>
                       <button className="cursor-pointer">+</button>
                     </div>
                     <span className="hover hover:bg-white/60 transition-all rounded-full p-3 hover:shadow-2xl">
@@ -123,7 +123,7 @@ const {user} = useUser()
                 </div>
 
                 <div className="flex justify-center">
-                  <button className="bg-red-500  text-white px-3 py-2 rounded-md">
+                  <button onClick={getLocation} className="bg-red-500  text-white px-3 py-2 rounded-md">
                     Detect Location
                   </button>
                 </div>
