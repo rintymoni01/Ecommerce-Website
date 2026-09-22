@@ -5,6 +5,7 @@ import { LuNotebookText } from "react-icons/lu";
 const Cart = () => {
   const { cartItem } = useCart();
   console.log(cartItem);
+  const totalPrice = cartItem.reduce((total, item)=>total+ item.price, 0)
 
   return (
     <div className="mt-10 max-w-6xl mx-auto mb-5">
@@ -119,7 +120,10 @@ const Cart = () => {
             <div className="bg-white border border-gray-100 shadow-xl rounded-md p-7 mt-4 space-y-2 h-max">
                 <h1 className="text-gray-800 font-bold text-xl">Bill Details</h1>
                 <div className="flex justify-between items-center">
-                    <h1><span><LuNotebookText /></span>Items total</h1>
+                    <h1 className="flex gap-1 items-center text-gray-700"><span><LuNotebookText /></span>Items total</h1>
+<p>${totalPrice}</p>
+                </div>
+                <div className="">
 
                 </div>
             </div>
