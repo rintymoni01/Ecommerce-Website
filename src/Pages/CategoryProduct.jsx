@@ -23,7 +23,18 @@ const CategoryProduct = () => {
     
     return (
         <div>
-            fsdese
+           {
+            setSearchData.length > 0 ? (
+                <div className="max-w-6xl mx-auto mt-10 mb-10 px-4"></div>
+            ):(
+                <div className="items-center flex justify-center h-[400px]">
+                    <video muted autoPlay loop>
+                        <source src={Loading} type='video/webm'/>
+                    </video>
+
+                </div>
+            )
+        }
         </div>
     );
 };
