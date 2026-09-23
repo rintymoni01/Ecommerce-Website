@@ -13,6 +13,7 @@ import { useCart } from "../../Contex/CardContex";
 
 const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
   const { cartItem } = useCart();
+  const [open]
   const toggleDropdown = () => {
     setOpenDropdown(!openDropdown);
   };
