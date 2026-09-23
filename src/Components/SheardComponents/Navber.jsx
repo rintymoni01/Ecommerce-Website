@@ -11,6 +11,7 @@ import {
 } from "@clerk/clerk-react";
 import { useCart } from "../../Contex/CardContex";
 import { useState } from "react";
+import ResponcivedMenu from "../ResponcivedMenu";
 
 const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
   const { cartItem } = useCart();
@@ -141,9 +142,10 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
           </SignedIn>
          </div>
          {
-          openNav ? <HiMenuAlt3 className="h-7 w-7 md:hidden"/>:<HiMenuAlt1/>
+          openNav ? <HiMenuAlt3 onClick={()=>setOpenNav(false)} className="h-7 w-7 md:hidden"/>:<HiMenuAlt1 onClick={()=>setOpenNav(true)} className="h-7 w-7 md:hidden"/>
          }
         </nav>
+        <ResponcivedMenu openNav={openNav} setOpenNav={setOpenNav} />
       </div>
     </div>
   );
