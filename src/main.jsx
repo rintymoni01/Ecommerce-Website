@@ -17,6 +17,7 @@ import Cart from "./Pages/Cart/Cart";
 import { DataProvider } from "./Contex/DataContex";
 import SingleProducts from "./Pages/Products/ProductsComponents/SingleProducts";
 import { CartProvider } from "./Contex/CardContex";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -69,6 +70,19 @@ ReactDOM.createRoot(root).render(
     <DataProvider>
       <CartProvider>
         <RouterProvider router={router} />
+        <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+
+/>
       </CartProvider>
     </DataProvider>
   </ClerkProvider>

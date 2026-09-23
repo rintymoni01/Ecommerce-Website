@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Breadcrums from "./Breadcrums";
 import { IoCartOutline } from "react-icons/io5";
+import { useCart } from "../../../Contex/CardContex";
 
 const SingleProducts = () => {
   const { id } = useParams();
 
   const [singleProduct, setSingleProduct] = useState(null);
-
+const {addToCart} =useCart()
   const getSingleProduct = async () => {
     try {
       const res = await axios.get(`https://dummyjson.com/products/${id}`);
@@ -79,7 +80,7 @@ const SingleProducts = () => {
                 />
               </div>
               <div className="flex gap-4 mt-4">
-                <button className="px-6 flex  bg-red-500 text-white rounded-md gap-2 py-2 text-lg">
+                <button  onClick={()=>addToCart(singleProduct)} className="px-6 flex  bg-red-500 text-white rounded-md gap-2 py-2 text-lg">
                   <IoCartOutline className="w-6 h-6"/> Add to Cart
                 </button>
               </div>
