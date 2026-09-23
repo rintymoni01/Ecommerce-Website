@@ -2,8 +2,8 @@
 
 const ProductListView = () => {
     return (
-        <div>
-            ProductListView
+        <div className="space-y-4 mt-2 rounded-md">
+            
         </div>
     );
 };
