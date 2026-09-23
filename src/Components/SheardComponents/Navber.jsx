@@ -17,7 +17,7 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
     setOpenDropdown(!openDropdown);
   };
   return (
-    <div className="bg-white py-3 shadow-2xl">
+    <div className="bg-white py-3 shadow-2xl px-4 md:px-0 ">
       <div className="max-w-6xl mx-auto flex justify-between items-center ">
         {/* Logo + Address */}
         <div className="flex gap-7 items-center">
@@ -125,7 +125,8 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
           </Link>
 
           {/* Login / User */}
-          <SignedOut>
+         <div className="hidden md:block">
+           <SignedOut>
             <SignInButton mode="modal">
               <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md font-semibold">
                 Sign In
@@ -136,6 +137,7 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
           <SignedIn>
             <UserButton />
           </SignedIn>
+         </div>
         </nav>
       </div>
     </div>
