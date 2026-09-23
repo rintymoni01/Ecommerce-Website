@@ -12,8 +12,19 @@ const ProductListView = ({ product }) => {
           onClick={() => navigate(`/product/${product.id}`)}
         />
         <div className="space-y-2 ">
-            <h1>Free Delivery Fri, is Apr Or Fastest Delivery Tomorrow, 17 Apr</h1>
-
+          
+         <p className=" font-bold text-xl hover:text-red-400 w-full pr-30 ">{product.description}</p>
+          <p className="font-semibold flex items-center text-lg ">
+            <span className="text-4xl">{product.price}</span>({product.discount}% off
+            )
+          </p>
+          <p>
+            Free Delivery Fri, is Apr <br /> Or Fastest Delivery Tomorrow, 17
+            Apr
+          </p>
+          <button className="bg-red-500 text-white px-3 py-1 rounded-md ">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
