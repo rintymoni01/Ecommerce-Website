@@ -18,6 +18,7 @@ import { DataProvider } from "./Contex/DataContex";
 import SingleProducts from "./Pages/Products/ProductsComponents/SingleProducts";
 import { CartProvider } from "./Contex/CardContex";
 import { ToastContainer } from "react-toastify";
+import CategoryProduct from "./Pages/CategoryProduct";
 
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <SingleProducts />,
+      },
+       {
+        path: "/category/:category",
+        element: <CategoryProduct />,
       },
       {
         path: "/about",
