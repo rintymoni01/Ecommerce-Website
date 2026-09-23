@@ -1,7 +1,7 @@
 
-const ResponcivedMenu = () => {
+const ResponcivedMenu = ({openNav, setOpenNav}) => {
     return (
-        <div>
+        <div className={(openNav ? "left-0":"-left-[100%]")}>
             
         </div>
     );

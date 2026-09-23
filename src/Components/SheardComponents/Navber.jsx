@@ -145,8 +145,9 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
           openNav ? <HiMenuAlt3 onClick={()=>setOpenNav(false)} className="h-7 w-7 md:hidden"/>:<HiMenuAlt1 onClick={()=>setOpenNav(true)} className="h-7 w-7 md:hidden"/>
          }
         </nav>
-        <ResponcivedMenu openNav={openNav} setOpenNav={setOpenNav} />
+       
       </div>
+       <ResponcivedMenu openNav={openNav} setOpenNav={setOpenNav} />
     </div>
   );
 };
