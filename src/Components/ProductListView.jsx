@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../Contex/CardContex";
 
 const ProductListView = ({ product }) => {
   const navigate = useNavigate();
+  const {addToCart}= useCart()
   return (
     <div className="space-y-4 mt-2 rounded-md">
       <div className="bg-gray-100 gap-7 flex items-center rounded-md p-2 ">
@@ -23,7 +25,7 @@ const ProductListView = ({ product }) => {
             Free Delivery <span className="font-semibold">Fri, is Apr</span>{" "}
             <br /> Or Fastest Delivery <span className="font-semibold">Tomorrow, 17 Apr</span>
           </p>
-          <button className="bg-red-500 text-white px-3 py-1 rounded-md ">
+          <button onClick={()=>addToCart(product)} className="bg-red-500 text-white px-3 py-1 rounded-md ">
             Add to Cart
           </button>
         </div>
