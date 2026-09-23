@@ -1,4 +1,5 @@
 import axios from "axios";
+import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -25,7 +26,9 @@ const CategoryProduct = () => {
         <div>
            {
             setSearchData.length > 0 ? (
-                <div className="max-w-6xl mx-auto mt-10 mb-10 px-4"></div>
+                <div className="max-w-6xl mx-auto mt-10 mb-10 px-4">
+                    <button className="bg-gray-800 mb-5 text-white px-3"><ChevronLeft/> Back</button>
+                </div>
             ):(
                 <div className="items-center flex justify-center h-[400px]">
                     <video muted autoPlay loop>
