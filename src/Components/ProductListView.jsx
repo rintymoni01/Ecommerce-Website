@@ -20,8 +20,8 @@ const ProductListView = ({ product }) => {
             % off )
           </p>
           <p>
-            Free Delivery Fri, is Apr <br /> Or Fastest Delivery Tomorrow, 17
-            Apr
+            Free Delivery <span className="font-semibold">Fri, is Apr</span>{" "}
+            <br /> Or Fastest Delivery <span className="font-semibold">Tomorrow, 17 Apr</span>
           </p>
           <button className="bg-red-500 text-white px-3 py-1 rounded-md ">
             Add to Cart
