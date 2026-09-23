@@ -31,9 +31,9 @@ const {addToCart} =useCart()
         <div className="px-4 pb-4 md:px-0">
           <Breadcrums title={singleProduct.title} />
 
-          <div className="max-w-6xl md:p-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="max-w-6xl md:p-6 mx-auto grid items-center grid-cols-1 md:grid-cols-2 gap-10">
             {/* Product Image */}
-            <div className="w-full">
+            <div className="w-full ">
               <img
                 src={singleProduct.images?.[0]}
                 alt={singleProduct.title}
@@ -43,11 +43,11 @@ const {addToCart} =useCart()
 
             {/* Product Details */}
             <div>
-              <h1 className="md:text-3xl font-bold text-gray-800">
+              <h1 className="md:text-3xl pb-4  font-bold  text-gray-800">
                 {singleProduct.title}
               </h1>
 
-              <div className="text-gray-700">
+              <div className="text-gray-700 ">
                 {singleProduct.brand?.toUpperCase()}/{" "}
                 {singleProduct.category?.toUpperCase()}
               </div>
@@ -66,7 +66,7 @@ const {addToCart} =useCart()
                   {singleProduct.discountPercentage}% discount
                 </span>
               </h2>
-              <p className="text-gray-500 mt-3">{singleProduct.description}</p>
+              <p className="text-gray-500 py-4">{singleProduct.description}</p>
 
               <div className="flex  items-center gap-4">
                 <label htmlFor="" className="text-sm font-medium text-gray-700">

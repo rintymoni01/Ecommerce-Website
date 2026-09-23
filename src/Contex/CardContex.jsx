@@ -1,5 +1,6 @@
 
 import { createContext, useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 const CartContex = createContext(null);
 
@@ -23,7 +24,8 @@ export const CartProvider = ({ children }) => {
             : item
         );
       }
-
+      
+ toast.success("products is added to cart")
       return [
         ...prevCart,
         {
@@ -54,37 +56,41 @@ export const CartProvider = ({ children }) => {
 
   // Decrease quantity
   const decreaseQuantity = (id) => {
+    
     setCartItem((prevCart) =>
-      prevCart
-        .map((item) =>
+      prevCart.map((item) =>
           item.id === id
-            ? {
-                ...item,
-                quantity: item.quantity - 1,
-              }
-            : item
+            ? {...item,quantity: item.quantity - 1,}: item
+            
         )
         .filter((item) => item.quantity > 0)
+       
     );
   };
 
   // Remove product
   const removeFromCart = (id) => {
+    toast.success("Products is deleted from cart")
     setCartItem((prevCart) =>
       prevCart.filter((item) => item.id !== id)
+     
     );
   };
-
+ 
+ 
 
 
    const updateQuantity = (cartItem , productId , action) =>{
+    
  cartItem.map(item =>{
   if(item.id === productId){
     let newUnit = item.quantity;
     if(action === "increase"){
       newUnit = newUnit + 1
+      toast.success("pQuantity is increased!")
     }else if (action === "decrease"){
       newUnit = newUnit -1
+       toast.success("pQuantity is decreased!")
     }
     return newUnit >0 ? {...item, quantity: newUnit} : null
   }
