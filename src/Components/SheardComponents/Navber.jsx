@@ -11,21 +11,21 @@ import {
 } from "@clerk/clerk-react";
 import { useCart } from "../../Contex/CardContex";
 
-const Navber = ({ location, getLocation, openDropdown, setOpenDropdown  }) => {
-const { cartItem } = useCart();
+const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
+  const { cartItem } = useCart();
   const toggleDropdown = () => {
     setOpenDropdown(!openDropdown);
   };
   return (
     <div className="bg-white py-3 shadow-2xl">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <div className="max-w-6xl mx-auto flex justify-between items-center ">
         {/* Logo + Address */}
         <div className="flex gap-7 items-center">
           <Link to="/" className="text-3xl font-bold">
             <span className="text-red-500 font-serif">SR</span>moni
           </Link>
 
-          <div className="text-gray-700 flex items-center gap-1 cursor-pointer">
+          <div className="text-gray-700 md:flex hidden items-center gap-1 cursor-pointer">
             <LuMapPin className="text-red-500" />
 
             <span className="font-semibold">
@@ -60,8 +60,8 @@ const { cartItem } = useCart();
         </div>
 
         {/* Navber */}
-        <nav className="flex gap-7 items-center">
-          <ul className="flex gap-7 items-center font-semibold">
+        <nav className="flex gap-7 items-center ">
+          <ul className="md:flex gap-7 items-center font-semibold hidden">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -120,7 +120,7 @@ const { cartItem } = useCart();
             <IoCartOutline className="h-7 w-7" />
 
             <span className="bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white">
-             {cartItem.length}
+              {cartItem.length}
             </span>
           </Link>
 

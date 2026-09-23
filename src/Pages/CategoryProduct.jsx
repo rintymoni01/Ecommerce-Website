@@ -24,6 +24,7 @@ const navigate =useNavigate()
 
   useEffect(() => {
     getFilterData();
+    window.scrollTo(0,0)
   }, [category]); // <-- dependency-te category add kore dile bhalo hoy
 
   return (
