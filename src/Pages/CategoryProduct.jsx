@@ -17,7 +17,9 @@ const CategoryProduct = () => {
         }
     }
     console.log(category);
-    useEffect
+    useEffect(()=>{
+        getFilterData()
+    },[])
     
     return (
         <div>
