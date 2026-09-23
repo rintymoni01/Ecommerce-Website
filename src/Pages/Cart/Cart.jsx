@@ -4,7 +4,7 @@ import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
 import { useUser } from "@clerk/clerk-react";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 const Cart = () => {
   const { location, getLocation } = useOutletContext();
@@ -18,7 +18,7 @@ const Cart = () => {
   } = useCart();
 
   const { user } = useUser();
-
+const navigate =useNavigate()
   // Total price
   const totalPrice = cartItem.reduce(
     (total, item) => total + Number(item.price) * Number(item.quantity || 1),
@@ -274,9 +274,11 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="flex justify-center items-center min-h-[400px]">
+        <div >
          <div className=" flex flex-col gap-3  justify-center items-center h-[600px]">
-          <h1 className="text-red-500/80 font-bold text-2xl">Oh no! Your cart is empty</h1>
+          <h1 className="text-red-500/80 font-bold text-5xl text-muted">Oh no! Your cart is empty</h1>
+          <img src='Image/empty.png' alt=""  className="w-[400px]"/>
+          <button onClick={()=>navigate ('/product')} className="bg-red-500 text-white px-3 py-2 rounded-md  cursor-pointer">Continue Shopping</button>
          </div>
         </div>
       )}
