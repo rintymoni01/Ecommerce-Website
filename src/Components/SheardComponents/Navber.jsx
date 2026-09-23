@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { LuMapPin } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
 import { IoCartOutline, IoCloseSharp } from "react-icons/io5";
-
+import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import {
   SignedIn,
   SignedOut,
@@ -10,10 +10,11 @@ import {
   UserButton,
 } from "@clerk/clerk-react";
 import { useCart } from "../../Contex/CardContex";
+import { useState } from "react";
 
 const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
   const { cartItem } = useCart();
-  const [open]
+  const [openNav, setOpenNav] = useState(false)
   const toggleDropdown = () => {
     setOpenDropdown(!openDropdown);
   };
@@ -139,6 +140,9 @@ const Navber = ({ location, getLocation, openDropdown, setOpenDropdown }) => {
             <UserButton />
           </SignedIn>
          </div>
+         {
+          openNav ? <HiMenuAlt3 className="h-7 w-7 md:hidden"/>:<HiMenuAlt1/>
+         }
         </nav>
       </div>
     </div>
