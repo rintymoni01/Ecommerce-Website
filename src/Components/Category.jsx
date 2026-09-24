@@ -15,7 +15,7 @@ const {data}=getData()
   };
   return (
     <div className="bg-[#101829]">
-      <div className="flex justify-around items-center px-4 py-7 gap-4 max-w-7xl mx-auto">
+      <div className="flex justify-around  flex-wrap items-center px-4 py-7 gap-4 max-w-7xl mx-auto">
         {categoryOnlyData?.slice(0-6).map((items, index) => {
           return (
             <div key={index}>
