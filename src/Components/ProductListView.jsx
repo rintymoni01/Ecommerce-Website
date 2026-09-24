@@ -14,8 +14,8 @@ const ProductListView = ({ product }) => {
           onClick={() => navigate(`/product/${product.id}`)}
         />
         <div className="space-y-2 ">
-          <p className=" font-bold text-xl hover:text-red-400 w-full pr-30 ">
-            {product.description}
+          <p className=" font-bold text-xl  hover:text-red-400 w-full pr-30 ">
+            {product.title}
           </p>
           <p className="font-semibold flex items-center text-lg ">
             <span className="text-4xl">{product.price}</span>({product.discount}
