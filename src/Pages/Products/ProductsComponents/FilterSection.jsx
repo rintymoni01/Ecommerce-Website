@@ -21,7 +21,7 @@ const FilterSection = ({
   };
 
   return (
-    <div className="bg-gray-100 mt-10 p-4 rounded-md h-max w-68">
+    <div className="bg-gray-100 mt-10 p-4 rounded-md h-max w-68 hidden md:block">
 
       {/* Search */}
       <input

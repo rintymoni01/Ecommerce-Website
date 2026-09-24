@@ -81,7 +81,7 @@ const ProductsComponents = () => {
   filterData?.length > 0 ? (
     <div className="flex flex-col gap-6 items-center">
       
-                <div className="grid grid-cols-4 mt-10 gap-7">
+                <div className="grid grid-cols-2 md:grid-cols-4 mt-10 gap-4 md:gap-7">
                   {filterData?.slice(page * 8 - 8, page * 8).map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
