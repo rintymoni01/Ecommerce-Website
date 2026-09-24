@@ -70,15 +70,15 @@ const Carousel = () => {
           <div key={item.id}>
             <div className="bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e]">
               
-              <div className="mx-auto flex min-h-[600px] max-w-7xl flex-col items-center justify-center gap-10 px-6 py-16 md:flex-row md:gap-16 md:px-10 md:py-0">
+              <div className="mx-auto flex min-h-[600px] max-w-7xl flex-col items-center  justify-center gap-10 px-6 py-16 md:flex-row md:gap-16 md:px-10 md:py-0">
 
                 {/* Text */}
-                <div className="w-full space-y-3 md:space-y-6 text-center md:w-1/2 md:text-left">
+                <div className="w-full   space-y-3 md:space-y-6 text-center md:w-1/2 text-left">
                   <h3 className="font-sans text-sm font-semibold text-red-500">
                     Enhancing your beauty with the best in Cosmetics
                   </h3>
 
-                  <h1 className="text-3xl font-bold uppercase text-white sm:text-4xl md:w-[500px] md:text-5xl">
+                  <h1 className="md:text-3xl text-xl font-bold  uppercase text-white sm:text-4xl md:w-[500px] md:text-5xl">
                     {item.title}
                   </h1>
 
