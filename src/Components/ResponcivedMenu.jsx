@@ -18,6 +18,7 @@ const ResponcivedMenu = ({ openNav, setOpenNav }) => {
   <h1 className="text-sm text-slate-500">Premium User</h1>
 </div>
             </div>
+            <nav></nav>
         </div>
     </div>
   );
