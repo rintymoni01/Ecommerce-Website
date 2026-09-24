@@ -11,7 +11,7 @@ const ProductListView = ({ product }) => {
           src={product.images?.[0]}
           alt={product.title}
           className="md:h-60 md:w-60 h-25 w-25 rounded-md cursor-pointer object-cover"
-          onClick={() => navigate(`/product/${product.id}`)}
+          onClick={() => navigate(`/products/${product.id}`)}
         />
         <div className="space-y-2 ">
           <p className=" font-bold md:text-xl text-lg  hover:text-red-400 w-full pr-30 ">

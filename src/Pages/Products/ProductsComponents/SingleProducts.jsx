@@ -43,7 +43,7 @@ const {addToCart} =useCart()
 
             {/* Product Details */}
             <div>
-              <h1 className="md:text-3xl pb-4  font-bold  text-gray-800">
+              <h1 className="md:text-3xl text-xl pb-4  font-bold  text-gray-800">
                 {singleProduct.title}
               </h1>
 
