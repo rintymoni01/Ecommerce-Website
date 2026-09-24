@@ -3,6 +3,7 @@ import { getData } from "../../../Contex/DataContex";
 import FilterSection from "./FilterSection";
 import ProductCard from "./ProductCard";
 import Pagnation from "./Pagnation";
+import MobileFilter from "../../../Components/MobileFilter";
 
 
 const ProductsComponents = () => {
@@ -13,6 +14,7 @@ const ProductsComponents = () => {
   const [brand, setBrand] = useState("All");
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [page, setPage] = useState(1);
+  const [openFilter, setFilter]=useState(false)
 
   useEffect(() => {
     fatchAllProducts();
@@ -54,6 +56,7 @@ const ProductsComponents = () => {
 
   return (
     <div>
+      <MobileFilter openFilter={openFilter} setFilter={setFilter}></MobileFilter>
       <div className="max-w-6xl mx-auto px-4 mb-10">
         {data?.length > 0 ? (
           <div>
