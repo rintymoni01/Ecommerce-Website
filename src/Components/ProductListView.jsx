@@ -14,14 +14,14 @@ const ProductListView = ({ product }) => {
           onClick={() => navigate(`/product/${product.id}`)}
         />
         <div className="space-y-2 ">
-          <p className=" font-bold text-xl  hover:text-red-400 w-full pr-30 ">
+          <p className=" font-bold md:text-xl text-lg  hover:text-red-400 w-full pr-30 ">
             {product.title}
           </p>
-          <p className="font-semibold flex items-center text-lg ">
-            <span className="text-4xl">{product.price}</span>({product.discount}
+          <p className="font-semibold flex items-center md:text-lg text-sm ">$
+            <span className="md:text-4xl text-3xl">{product.price}</span>({product.discount}
             % off )
           </p>
-          <p>
+          <p className="text-sm">
             Free Delivery <span className="font-semibold">Fri, is Apr</span>{" "}
             <br /> Or Fastest Delivery <span className="font-semibold">Tomorrow, 17 Apr</span>
           </p>
