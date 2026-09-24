@@ -28,7 +28,9 @@ const ProductsComponents = () => {
   const handelCategoryChange = (e) => {
     setCategory(e.target.value);
     setPage(1);
+    setOpenFilter(false)
   };
+
 
   // Brand change 
 
@@ -36,6 +38,7 @@ const ProductsComponents = () => {
   const handelBrandChange = (e) => {
     setBrand(e.target.value);
     setPage(1);
+    setOpenFilter(false)
   };
 
   const pageHandler = (selectedPage) => {
@@ -56,7 +59,22 @@ const ProductsComponents = () => {
 
   return (
     <div>
-      <MobileFilter openFilter={openFilter} setOpenFilter={setOpenFilter}></MobileFilter>
+      <MobileFilter openFilter={openFilter} setOpenFilter={setOpenFilter} search={search}
+                setSearch={(val) => {
+                  setSearch(val);
+                  setPage(1); // সার্চ করার সময় পেজ ১ এ সেট হবে
+                }}
+                brand={brand}
+                setBrand={setBrand}
+                priceRange={priceRange}
+                setPriceRange={(val) => {
+                  setPriceRange(val);
+                  setPage(1); // প্রাইস চেঞ্জ হলেও পেজ ১ এ সেট হবে
+                }}
+                category={category}
+                setCategory={setCategory}
+                handelCategoryChange={handelCategoryChange}
+                handelBrandChange={handelBrandChange}></MobileFilter>
       <div className="max-w-6xl mx-auto px-4 mb-10">
         {data?.length > 0 ? (
           <div>
