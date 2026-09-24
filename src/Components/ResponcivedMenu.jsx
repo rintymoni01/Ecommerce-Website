@@ -18,7 +18,9 @@ const ResponcivedMenu = ({ openNav, setOpenNav }) => {
   <h1 className="text-sm text-slate-500">Premium User</h1>
 </div>
             </div>
-            <nav></nav>
+            <nav className="mt-12">
+              <ul className="flex flex-col gap-7  text-2xl font-semibold"></ul>
+            </nav>
         </div>
     </div>
   );
