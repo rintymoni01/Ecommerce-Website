@@ -73,7 +73,7 @@ const Carousel = () => {
               <div className="mx-auto flex min-h-[600px] max-w-7xl flex-col items-center justify-center gap-10 px-6 py-16 md:flex-row md:gap-16 md:px-10 md:py-0">
 
                 {/* Text */}
-                <div className="w-full space-y-5 text-center md:w-1/2 md:text-left">
+                <div className="w-full space-y-3 md:space-y-6 text-center md:w-1/2 md:text-left">
                   <h3 className="font-sans text-sm font-semibold text-red-500">
                     Enhancing your beauty with the best in Cosmetics
                   </h3>

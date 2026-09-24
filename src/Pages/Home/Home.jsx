@@ -6,7 +6,7 @@ import MidBanner from "./HomeComponents/MidBanner";
 const Home = () => {
     return (
       
-   <div>
+   <div className="overflow-x-hidden w-full max-w-full">
       <Carousel></Carousel>
      <MidBanner></MidBanner>
      <Fetures></Fetures>
