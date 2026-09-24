@@ -14,7 +14,7 @@ const ProductsComponents = () => {
   const [brand, setBrand] = useState("All");
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [page, setPage] = useState(1);
-  const [openFilter, setFilter]=useState(false)
+  const [openFilter, setOpenFilter]=useState(false)
 
   useEffect(() => {
     fatchAllProducts();
@@ -56,7 +56,7 @@ const ProductsComponents = () => {
 
   return (
     <div>
-      <MobileFilter openFilter={openFilter} setFilter={setFilter}></MobileFilter>
+      <MobileFilter openFilter={openFilter} setOpenFilter={setOpenFilter}></MobileFilter>
       <div className="max-w-6xl mx-auto px-4 mb-10">
         {data?.length > 0 ? (
           <div>
