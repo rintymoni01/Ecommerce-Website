@@ -1,62 +1,62 @@
-
 import { GrLocationPin } from "react-icons/gr";
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] pt-28 px-50">
-      <div className="mx-auto px-4 bg-[#3b3a62] p-6 md:p-8 rounded-xl px-20 text-white">
-        
-        <h3 className="text-white text-center font-bold text-2xl mb-8">
+    <div className="min-h-screen bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] pt-20 sm:pt-24 md:pt-28 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-50">
+      <div className="mx-auto bg-[#3b3a62] p-5 sm:p-6 md:p-8 lg:p-8 rounded-xl px-5 sm:px-8 md:px-12 lg:px-20 text-white">
+
+        {/* Title */}
+        <h3 className="text-white text-center font-bold text-xl sm:text-2xl mb-6 sm:mb-8">
           Get in touch with{" "}
           <span className="text-red-500 font-bold">SR</span>moni
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-xl font-semibold text-white my-5">
+            <h4 className="text-lg sm:text-xl font-semibold text-white my-4 sm:my-5">
               Contact Info
             </h4>
 
-            <p className="text-sm text-gray-400 mb-6">
+            <p className="text-sm sm:text-base text-gray-400 mb-6 leading-6">
               Have a question or need beauty advice? We're here to help you
               with your skincare and makeup journey.
             </p>
 
             {/* Address */}
-            <div className="flex gap-3 items-center mb-2">
-              <GrLocationPin className="text-red-300 text-xl" />
+            <div className="flex gap-3 items-start mb-4">
+              <GrLocationPin className="text-red-300 text-xl min-w-5 mt-0.5" />
 
-              <h5 className="font-semibold text-sm text-white">
+              <h5 className="font-semibold text-sm text-white whitespace-nowrap">
                 Address:
               </h5>
 
-              <p className="text-gray-200 text-sm uppercase">
+              <p className="text-gray-200 text-sm uppercase break-words">
                 Mohakhali TB Gate Dhaka
               </p>
             </div>
 
             {/* Email */}
-            <div className="flex gap-3 items-center mb-2">
-              <MdMarkEmailRead className="text-white text-xl" />
+            <div className="flex gap-3 items-start mb-4">
+              <MdMarkEmailRead className="text-white text-xl min-w-5 mt-0.5" />
 
-              <h5 className="font-semibold text-sm text-white">
+              <h5 className="font-semibold text-sm text-white whitespace-nowrap">
                 Email:
               </h5>
 
-              <p className="text-gray-200 text-sm">
+              <p className="text-gray-200 text-sm break-all">
                 rintymoni01@gmail.com
               </p>
             </div>
 
             {/* Phone */}
             <div className="flex gap-3 items-center mb-2">
-              <FaPhoneVolume className="text-red-400 text-xl" />
+              <FaPhoneVolume className="text-red-400 text-xl min-w-5" />
 
-              <h5 className="font-semibold text-sm text-white">
+              <h5 className="font-semibold text-sm text-white whitespace-nowrap">
                 Phone:
               </h5>
 
@@ -67,7 +67,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div >
+          <div>
             <form>
 
               {/* Name */}
@@ -142,4 +142,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

@@ -18,7 +18,7 @@ const MobileFilter = ({
 }) => {
   const { categoryOnlyData, brandOnlyData } = getData();
   const [showBrandDropdown, setShowBrandDropdown] = useState(false);
-
+window.scrollTo(0,0)
   return (
     <div className="md:hidden">
       {/* Filter Button */}

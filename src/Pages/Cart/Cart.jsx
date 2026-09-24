@@ -40,7 +40,7 @@ const navigate =useNavigate()
       className="bg-gray-100 p-5 rounded-md flex items-center justify-between gap-5 mt-3 w-full"
     >
       {/* Product */}
-      <div className="flex  items-center md:gap-4  w-1/3">
+      <div className="flex  items-center md:gap-4 gap-4 w-1/3">
         <img
           src={
             Array.isArray(item.images)
@@ -48,11 +48,11 @@ const navigate =useNavigate()
               : item.images
           }
           alt={item.title}
-          className="w-20 h-20 object-cover rounded-md"
+          className="w-20 h-20  object-cover rounded-md"
         />
 
-        <div >
-          <h1 className="md:w-[300px]  line-clamp-2">
+        <div className="" >
+          <h1 className="md:w-[300px] line-clamp-2">
             {item.title}
           </h1>
 
@@ -63,7 +63,7 @@ const navigate =useNavigate()
       </div>
 
       {/* Quantity */}
-      <div className="w-1/3 flex justify-center ">
+      <div className="w-1/3 flex justify-center pl-26 ">
         <div className="bg-red-500 text-white flex items-center gap-4 px-3 py-2 font-bold rounded-md text-xl">
           <button
             onClick={() => decreaseQuantity(item.id)}

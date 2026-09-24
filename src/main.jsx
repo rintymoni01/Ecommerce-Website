@@ -19,6 +19,7 @@ import SingleProducts from "./Pages/Products/ProductsComponents/SingleProducts";
 import { CartProvider } from "./Contex/CardContex";
 import { ToastContainer } from "react-toastify";
 import CategoryProduct from "./Pages/CategoryProduct";
+import ScrollToTop from "react-scroll-to-top";
 
 
 
@@ -72,6 +73,7 @@ ReactDOM.createRoot(root).render(
     publishableKey={PUBLISHABLE_KEY}
     afterSignOutUrl="/"
   >
+    <ScrollToTop smooth color="white"  style={{backgroundColor:'#fa2d37', display:'flex', alignItems:'center', justifyContent:'center', }}/>
     <DataProvider>
       <CartProvider>
         <RouterProvider router={router} />
