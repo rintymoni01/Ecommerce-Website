@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MidBanner = () => {
   return (
     <div className="bg-gray-100 md:py-24">
@@ -18,9 +20,11 @@ const MidBanner = () => {
               Discover the latest beauty trends at unbeatable prices, with free
               shipping on every order.
             </p>
-            <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-lg  transition duration-300">
+          <Link to="/products">
+           <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-lg  transition duration-300">
               Shop Now
             </button>
+          </Link>
           </div>
         </div>
       </div>

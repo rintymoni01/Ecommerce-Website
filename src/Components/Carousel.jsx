@@ -12,6 +12,7 @@ import {
 } from "react-icons/ai";
 
 import Category from "./Category";
+import { Link } from "react-router-dom";
 
 const Slider = SliderImport.default ?? SliderImport;
 
@@ -86,9 +87,10 @@ const Carousel = () => {
                     {item.description}
                   </h4>
 
+                  <Link to='/products'>
                   <button className="mt-2 cursor-pointer rounded-md bg-gradient-to-r from-red-500 to-purple-500 px-5 py-2.5 font-semibold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-red-500/30">
                     Shop Now
-                  </button>
+                  </button></Link>
                 </div>
 
                 {/* Image */}
